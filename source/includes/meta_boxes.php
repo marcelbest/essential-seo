@@ -3,6 +3,11 @@
 // Prohibit direct script loading
 defined( 'ABSPATH' ) || die( 'No direct script access allowed!' );
 
+// Hide our meta from the_meta() and custom fields UI
+add_filter('is_protected_meta', function($protected, $meta_key) {
+    return $meta_key === 'esseo_meta_boxes' ? true : $protected;
+}, 10, 2);
+
 /**
  * Enable support for custom SEO description on posts and pages
  * 

@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Essential SEO\n"
-"POT-Creation-Date: 2018-02-14 18:34+0100\n"
-"PO-Revision-Date: 2018-02-14 18:33+0100\n"
+"Project-Id-Version: Essential SEO 1.1.0\n"
+"POT-Creation-Date: 2026-05-11 00:00+0100\n"
+"PO-Revision-Date: 2026-05-11 00:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,21 +21,21 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/functions.php:96
+#: includes/functions.php
 msgid ""
 "Thank you for using this plugin.<br><strong>It requires some important "
 "settings.</strong>"
 msgstr ""
 
-#: includes/functions.php:100
+#: includes/functions.php
 msgid "To the settings page"
 msgstr ""
 
-#: includes/functions.php:161
+#: includes/functions.php
 msgid "Essential SEO Settings Page"
 msgstr ""
 
-#: includes/functions.php:221
+#: includes/functions.php
 msgid ""
 "In order to let this plugin enhance your website, please go carefully "
 "through each setting here. Once set, you can leave it as is and do the rest "
@@ -43,194 +43,141 @@ msgid ""
 "write a description for search engines."
 msgstr ""
 
-#: includes/functions.php:233
+#: includes/functions.php
 msgid "Great"
 msgstr ""
 
-#: includes/functions.php:237
+#: includes/functions.php
 msgid ""
 "You have Polylang installed. You can translate your default settings for all "
 "languages here"
 msgstr ""
 
-#: includes/functions.php:245
+#: includes/functions.php
 msgid "Go to Polylang settings"
 msgstr ""
 
-#: includes/functions.php:282
+#: includes/functions.php
 msgid "The Open Graph protocol"
 msgstr ""
 
-#: includes/functions.php:283
+#: includes/functions.php
 msgid "HTML head tags"
 msgstr ""
 
-#: includes/functions.php:284
-msgid "Stats"
+#: includes/functions.php
+msgid "Scripts"
 msgstr ""
 
-#: includes/functions.php:303
+#: includes/functions.php
+msgid "Settings for this section"
+msgstr ""
+
+#: includes/functions.php
 msgid ""
 "The <a href=\"http://ogp.me/\" target=\"_blank\">Open Graph protocol</a> "
 "enables any web page to become a rich object in a social graph."
 msgstr ""
 
-#: includes/functions.php:313
+#: includes/functions.php
 msgid ""
 "Here you can set the defaults for your website's description, keywords, "
 "share image and the title."
 msgstr ""
 
-#: includes/functions.php:323
+#: includes/functions.php
 msgid ""
-"Set your statistics provider here. (Google Analytics only at this point of "
-"time.)"
+"Paste your complete tracking snippet here (GA4, GTM, etc.). Preconnect hints "
+"and the GTM noscript fallback are added automatically."
 msgstr ""
 
-#: includes/functions.php:333
-msgid "Settings for this section"
-msgstr ""
-
-#: includes/functions.php:354
+#: includes/functions.php
 msgid "Enable Open Graph"
 msgstr ""
 
-#: includes/functions.php:364
+#: includes/functions.php
 msgid "Title separator"
 msgstr ""
 
-#: includes/functions.php:365
+#: includes/functions.php
 msgid "Default & recommended: |"
 msgstr ""
 
-#: includes/functions.php:375 includes/html_header.php:31
+#: includes/functions.php includes/html_header.php
 msgid "Default description"
 msgstr ""
 
-#: includes/functions.php:376
+#: includes/functions.php
 msgid ""
 "Your default description of your website (from about 160 up to 320 chars). "
 "No HTML!<br>The description should correspont to your website's "
 "(text-)content."
 msgstr ""
 
-#: includes/functions.php:386 includes/html_header.php:36
-msgid "Default keywords"
-msgstr ""
-
-#: includes/functions.php:387
-msgid ""
-"All your keywords, comma seperated (keyword1,keyword2,...). No HTML!"
-"<br>These keywords should correspont to your website's (text-)content."
-msgstr ""
-
-#: includes/functions.php:397
+#: includes/functions.php
 msgid "Share image path"
 msgstr ""
 
-#: includes/functions.php:398
+#: includes/functions.php
 msgid ""
 "The default share image path is needed here, please set one. http://your."
 "domain/img-path<br>If a page or post has a feature image it will be used "
 "instead."
 msgstr ""
 
-#: includes/functions.php:409
-msgid "Google Analytics ID"
+#: includes/functions.php
+msgid "Header Scripts"
 msgstr ""
 
-#: includes/functions.php:410
+#: includes/functions.php
 msgid ""
-"Also referred as \"Tracking-ID\" or \"GA_TRACKING_ID\".<br>More information "
-"can be found <a href=\"https://support.google.com/analytics/answer/1102152?"
-"csw=1#properties\" target=\"_blank\">here</a> and <a href=\"https://support."
-"google.com/analytics/answer/1008080\" target=\"_blank\">here</a>."
+"Paste your complete tracking snippet here (GA4, GTM, etc.). The plugin "
+"automatically adds preconnect hints for known Google domains and a GTM "
+"noscript fallback in the footer."
 msgstr ""
 
-#: includes/functions.php:621
+#: includes/functions.php
 msgid "Expecting a Numeric value! Please fix."
 msgstr ""
 
-#: includes/functions.php:634
+#: includes/functions.php
 msgid "Expecting comma separated numeric values"
 msgstr ""
 
-#: includes/functions.php:644
+#: includes/functions.php
 msgid "Expecting comma separated numeric values! Please fix."
 msgstr ""
 
-#: includes/functions.php:669
+#: includes/functions.php
 msgid "Invalid email! Please re-enter!"
 msgstr ""
 
-#: includes/functions.php:671
+#: includes/functions.php
 msgid "This setting field cannot be empty! Please enter a valid email address."
 msgstr ""
 
-#: includes/functions.php:679
+#: includes/functions.php
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: includes/functions.php:706
-msgid "Please enter a valid Google Analytics ID."
-msgstr ""
-
-#: includes/html_header.php:41
+#: includes/html_header.php
 msgid "Default share image"
 msgstr ""
 
-#: includes/meta_boxes.php:17
+#: includes/meta_boxes.php
 msgid "SEO"
 msgstr ""
 
-#: includes/meta_boxes.php:49
-msgid "Meta description (about 250 to 320 chars)"
+#: includes/meta_boxes.php
+msgid ""
+"Meta description (about 250 to 320 chars) — leave empty to use the excerpt "
+"or the site default"
 msgstr ""
 
-#: includes/meta_boxes.php:112
+#: includes/meta_boxes.php
 msgid ""
 "<strong>SEO:</strong> Your meta-description had more than 320 characters. It "
 "was shortened for you."
-msgstr ""
-
-#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
-msgid "Check for updates"
-msgstr ""
-
-#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:432
-msgid "View details"
-msgstr ""
-
-#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:455
-#, php-format
-msgid "More information about %s"
-msgstr ""
-
-#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:548
-#, php-format
-msgctxt "the plugin title"
-msgid "The %s plugin is up to date."
-msgstr ""
-
-#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:550
-#, php-format
-msgctxt "the plugin title"
-msgid "A new version of the %s plugin is available."
-msgstr ""
-
-#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:552
-#, php-format
-msgctxt "the plugin title"
-msgid "Could not determine if updates are available for %s."
-msgstr ""
-
-#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:558
-#, php-format
-msgid "Unknown update checker status \"%s\""
-msgstr ""
-
-#: includes/plugin-update-checker/Puc/v4p4/Vcs/PluginUpdateChecker.php:98
-msgid "There is no changelog available."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -248,5 +195,5 @@ msgid "Marcel Best"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://irrelevant.biz/"
+msgid "https://marcelbest.com"
 msgstr ""

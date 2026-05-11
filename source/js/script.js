@@ -1,3 +1,5 @@
+/* global jQuery */
+
 jQuery(function() {
 
     // Highlight fields with validation errors

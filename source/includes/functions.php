@@ -43,16 +43,18 @@ function esseo_install() {
     // @link https://codex.wordpress.org/Function_Reference/set_transient
     set_transient('essential-seo-activation', true, 0);
 
-    // Save default values to database
-    $default = [
-        ESSEO_SHORTNAME . "_checkbox_og"          => '0',
-        ESSEO_SHORTNAME . "_title_seperator"      => '|',
-        ESSEO_SHORTNAME . "_default_description"  => '',
-        ESSEO_SHORTNAME . "_share_img"            => '',
-        ESSEO_SHORTNAME . "_header_scripts"       => '',
-    ];
+    // Save default values only on fresh install, never overwrite existing settings
+    if (get_option('esseo_options') === false) {
+        $default = [
+            ESSEO_SHORTNAME . "_checkbox_og"          => '0',
+            ESSEO_SHORTNAME . "_title_seperator"      => '|',
+            ESSEO_SHORTNAME . "_default_description"  => '',
+            ESSEO_SHORTNAME . "_share_img"            => '',
+            ESSEO_SHORTNAME . "_header_scripts"       => '',
+        ];
 
-    update_option('esseo_options', $default);
+        update_option('esseo_options', $default);
+    }
 
 }
 

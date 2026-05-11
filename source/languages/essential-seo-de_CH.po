@@ -1,0 +1,271 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Essential SEO\n"
+"POT-Creation-Date: 2018-02-14 18:34+0100\n"
+"PO-Revision-Date: 2018-02-14 19:38+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: essential-seo.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: de_CH\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/functions.php:96
+msgid ""
+"Thank you for using this plugin.<br><strong>It requires some important "
+"settings.</strong>"
+msgstr ""
+"Danke für die Benutzung dieses Plugins.<br><strong>Es bedarf einiger "
+"wichtiger Einstellungen.</strong>"
+
+#: includes/functions.php:100
+msgid "To the settings page"
+msgstr "Zu den Einstellungen"
+
+#: includes/functions.php:161
+msgid "Essential SEO Settings Page"
+msgstr "Essential SEO Einstellungen"
+
+#: includes/functions.php:221
+msgid ""
+"In order to let this plugin enhance your website, please go carefully "
+"through each setting here. Once set, you can leave it as is and do the rest "
+"of the work on each post and page. They have now a custom fields to let you "
+"write a description for search engines."
+msgstr ""
+"Um dieses Plugin Ihre Website verbessern zu lassen, gehen Sie bitte "
+"sorgfältig jede Einstellung durch. Einmal eingestellt, können Sie es so "
+"belassen und den Rest der Arbeit auf jedem Beitrag bzw. Seite erledigen. Sie "
+"haben jetzt benutzerdefinierte Felder zur Verfügung wo sie eine Beschreibung "
+"für die Suchmaschinen schreiben können."
+
+#: includes/functions.php:233
+msgid "Great"
+msgstr "Super"
+
+#: includes/functions.php:237
+msgid ""
+"You have Polylang installed. You can translate your default settings for all "
+"languages here"
+msgstr ""
+"Sie haben Polylang installiert. Sie können die Standardeinstellungen für "
+"alle Sprachen hier übersetzen"
+
+#: includes/functions.php:245
+msgid "Go to Polylang settings"
+msgstr "Zu den Polylang Einstellungen"
+
+#: includes/functions.php:282
+msgid "The Open Graph protocol"
+msgstr "Das Open Graph Protokoll"
+
+#: includes/functions.php:283
+msgid "HTML head tags"
+msgstr "HTML Kopfzeilen tags"
+
+#: includes/functions.php:284
+msgid "Stats"
+msgstr "Statistiken"
+
+#: includes/functions.php:303
+msgid ""
+"The <a href=\"http://ogp.me/\" target=\"_blank\">Open Graph protocol</a> "
+"enables any web page to become a rich object in a social graph."
+msgstr ""
+
+#: includes/functions.php:313
+msgid ""
+"Here you can set the defaults for your website's description, keywords, "
+"share image and the title."
+msgstr ""
+
+#: includes/functions.php:323
+msgid ""
+"Set your statistics provider here. (Google Analytics only at this point of "
+"time.)"
+msgstr ""
+"Stellen Sie hier Ihren Statistiken-Anbieter ein. (Nur Google Analytics zu "
+"diesem Zeitpunkt verfügbar.)"
+
+#: includes/functions.php:333
+msgid "Settings for this section"
+msgstr "Einstellungen für diesen Abschnitt"
+
+#: includes/functions.php:354
+msgid "Enable Open Graph"
+msgstr "Open Graph aktivieren"
+
+#: includes/functions.php:364
+msgid "Title separator"
+msgstr "Titel Trennzeichen"
+
+#: includes/functions.php:365
+msgid "Default & recommended: |"
+msgstr "Standard- & empfohlen: |"
+
+#: includes/functions.php:375 includes/html_header.php:31
+msgid "Default description"
+msgstr "Standardbeschreibung"
+
+#: includes/functions.php:376
+msgid ""
+"Your default description of your website (from about 160 up to 320 chars). "
+"No HTML!<br>The description should correspont to your website's "
+"(text-)content."
+msgstr ""
+
+#: includes/functions.php:386 includes/html_header.php:36
+msgid "Default keywords"
+msgstr "Standard-Schlagworte"
+
+#: includes/functions.php:387
+msgid ""
+"All your keywords, comma seperated (keyword1,keyword2,...). No HTML!"
+"<br>These keywords should correspont to your website's (text-)content."
+msgstr ""
+"Alle Ihre Schlagworte, Komma getrennt (keyword1, keyword2,...). Kein HTML!"
+"<br>Diese Keywords sollten dem (Text)-Inhalt auf Ihrer Website entsprechen."
+
+#: includes/functions.php:397
+msgid "Share image path"
+msgstr "Dateipfad für Teilen-Bild"
+
+#: includes/functions.php:398
+msgid ""
+"The default share image path is needed here, please set one. http://your."
+"domain/img-path<br>If a page or post has a feature image it will be used "
+"instead."
+msgstr ""
+
+#: includes/functions.php:409
+msgid "Google Analytics ID"
+msgstr "Google Analytics ID"
+
+#: includes/functions.php:410
+msgid ""
+"Also referred as \"Tracking-ID\" or \"GA_TRACKING_ID\".<br>More information "
+"can be found <a href=\"https://support.google.com/analytics/answer/1102152?"
+"csw=1#properties\" target=\"_blank\">here</a> and <a href=\"https://support."
+"google.com/analytics/answer/1008080\" target=\"_blank\">here</a>."
+msgstr ""
+
+#: includes/functions.php:621
+msgid "Expecting a Numeric value! Please fix."
+msgstr "Numerischer Wert erwartet. Bitte erneut eingeben."
+
+#: includes/functions.php:634
+msgid "Expecting comma separated numeric values"
+msgstr "Komma getrennte numerische Werte erwartet"
+
+#: includes/functions.php:644
+msgid "Expecting comma separated numeric values! Please fix."
+msgstr "Komma getrennte numerische Werte erwartet. Bitte erneut eingeben."
+
+#: includes/functions.php:669
+msgid "Invalid email! Please re-enter!"
+msgstr "Ungültige E-Mail. Bitte erneut eingeben!"
+
+#: includes/functions.php:671
+msgid "This setting field cannot be empty! Please enter a valid email address."
+msgstr ""
+"Dieses Einstellungsfeld darf nicht leer sein! Bitte geben Sie eine gültige e-"
+"Mail-Adresse ein."
+
+#: includes/functions.php:679
+msgid "Please enter a valid email address."
+msgstr "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+
+#: includes/functions.php:706
+msgid "Please enter a valid Google Analytics ID."
+msgstr "Bitte geben Sie eine gültige Google Analytics ID ein."
+
+#: includes/html_header.php:41
+msgid "Default share image"
+msgstr "Standard Teilen-Bild"
+
+#: includes/meta_boxes.php:17
+msgid "SEO"
+msgstr "SEO"
+
+#: includes/meta_boxes.php:49
+msgid "Meta description (about 250 to 320 chars)"
+msgstr "Meta-Beschreibung (ca. 250 bis 320 Zeichen)"
+
+#: includes/meta_boxes.php:112
+msgid ""
+"<strong>SEO:</strong> Your meta-description had more than 320 characters. It "
+"was shortened for you."
+msgstr ""
+"<strong>SEO:</strong> Ihre meta-Beschreibung hatte mehr als 320 Zeichen. Sie "
+"wurde gekürzt."
+
+#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:395
+msgid "Check for updates"
+msgstr "Auf Updates prüfen"
+
+#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:432
+msgid "View details"
+msgstr "Details anzeigen"
+
+#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:455
+#, php-format
+msgid "More information about %s"
+msgstr "Mehr Informationen über %s"
+
+#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:548
+#, php-format
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr "Das %s Plugin ist aktuell."
+
+#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:550
+#, php-format
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr "Eine neue Version von %s ist verfügbar."
+
+#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:552
+#, php-format
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr "Konnte nicht feststellen, ob Updates für %s verfügbar sind."
+
+#: includes/plugin-update-checker/Puc/v4p4/Plugin/UpdateChecker.php:558
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr "Unbekannter Update-Prüfungs-Status \"%s\""
+
+#: includes/plugin-update-checker/Puc/v4p4/Vcs/PluginUpdateChecker.php:98
+msgid "There is no changelog available."
+msgstr "Es steht kein Änderungsprotokoll zur Verfügung."
+
+#. Plugin Name of the plugin/theme
+msgid "Essential SEO"
+msgstr "Essential SEO"
+
+#. Description of the plugin/theme
+msgid ""
+"A simple SEO WordPress plugin, which provides just the essentials. It works "
+"well together with Polylang."
+msgstr ""
+"Ein einfaches SEO WordPress Plugin, welches nur die wichtigen Dinge zur "
+"Verfügung stellt. Es funktioniert auch zusammen mit Polylang."
+
+#. Author of the plugin/theme
+msgid "Marcel Best"
+msgstr "Marcel Best"
+
+#. Author URI of the plugin/theme
+msgid "https://irrelevant.biz/"
+msgstr "https://irrelevant.biz/"

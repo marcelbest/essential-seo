@@ -1,0 +1,57 @@
+// Variables
+$border-color: rgba(0, 0, 0, .15);
+$border-radius: 6px;
+$spacing: 20px;
+
+// Admin notices
+.notice,
+div.updated,
+div.error {
+    margin: $spacing 15px $spacing 0;
+}
+
+// Hidden error messages (shown via JS)
+.esseo-message {
+    display: none;
+}
+
+// Settings page wrapper
+.wrap {
+
+    > p {
+        margin-bottom: $spacing;
+    }
+
+    form {
+        border-top: 1px solid $border-color;
+        padding-top: 10px;
+    }
+
+    .form-table {
+        border-collapse: separate;
+        border: 1px solid $border-color;
+        margin-bottom: $spacing;
+        padding: 0 10px;
+        background-color: white;
+        border-radius: $border-radius;
+    }
+
+    .polylang-notice {
+        border: 1px solid $border-color;
+        padding: 0 10px;
+        background-color: rgb(204, 228, 255);
+        border-radius: $border-radius;
+        margin-bottom: $spacing;
+    }
+
+}
+
+// Form fields
+input.regular-text,
+textarea.textarea {
+    min-width: 50%;
+}
+
+.select option {
+    padding-right: $spacing;
+}

@@ -14,6 +14,9 @@ Thumbs.db
 # Ignore Claude Code working directory
 .claude/
 
+# Ignore CodeKit project config (local only)
+.config.codekit3
+
 # Ignore environment and secret files
 .env
 config.json

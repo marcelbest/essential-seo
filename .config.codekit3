@@ -9,13 +9,1143 @@
   ],
   "creatorBuild" : "34921",
   "files" : {
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/.gitattributes" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/.gitattributes",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/.gitignore" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/.gitignore",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/LICENSE" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/LICENSE",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/css\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/css\/index.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/css\/style.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/css\/style.css",
+      "oF" : 1,
+      "oS" : 0,
+      "pg" : 0
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/essential-seo.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/essential-seo.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/functions.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/functions.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/html_header.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/html_header.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/index.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/meta_boxes.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/meta_boxes.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/composer.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/composer-min.json",
+      "oF" : 1,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/css\/puc-debug-bar.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/css\/puc-debug-bar-min.css",
+      "oF" : 1,
+      "pg" : 0
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/js\/debug-bar.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/js\/debug-bar.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ca.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ca.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ca.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ca.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-cs_CZ.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-cs_CZ.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-cs_CZ.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-cs_CZ.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-da_DK.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-da_DK.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-da_DK.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-da_DK.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-de_DE.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-de_DE.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-de_DE.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-de_DE.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-el.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-el.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-el.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-el.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_AR.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_AR.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_AR.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_AR.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CL.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CL.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CL.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CL.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CO.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CO.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CO.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CO.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CR.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CR.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CR.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_CR.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_DO.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_DO.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_DO.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_DO.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_ES.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_ES.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_ES.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_ES.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_GT.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_GT.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_GT.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_GT.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_HN.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_HN.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_HN.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_HN.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_MX.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_MX.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_MX.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_MX.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_PE.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_PE.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_PE.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_PE.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_PR.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_PR.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_PR.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_PR.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_UY.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_UY.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_UY.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_UY.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_VE.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_VE.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_VE.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-es_VE.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fa_IR.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fa_IR.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fa_IR.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fa_IR.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_CA.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_CA.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_CA.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_CA.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_FR.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_FR.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_FR.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_FR.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-hu_HU.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-hu_HU.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-hu_HU.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-hu_HU.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-it_IT.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-it_IT.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-it_IT.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-it_IT.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ja.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ja.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ja.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ja.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_BE.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_BE.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_BE.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_BE.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_NL.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_NL.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_NL.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_NL.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-pt_BR.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-pt_BR.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-pt_BR.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-pt_BR.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ru_RU.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ru_RU.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ru_RU.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ru_RU.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sl_SI.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sl_SI.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sl_SI.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sl_SI.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sr_RS.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sr_RS.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sr_RS.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sr_RS.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sv_SE.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sv_SE.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sv_SE.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sv_SE.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-tr_TR.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-tr_TR.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-tr_TR.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-tr_TR.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-uk_UA.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-uk_UA.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-uk_UA.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-uk_UA.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-zh_CN.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-zh_CN.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-zh_CN.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-zh_CN.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker.pot" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker.pot",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/license.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/license.txt",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/load-v5p6.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/load-v5p6.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/plugin-update-checker.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/plugin-update-checker.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5\/PucFactory.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5\/PucFactory.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Autoloader.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Autoloader.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/DebugBar\/Extension.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/DebugBar\/Extension.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/DebugBar\/Panel.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/DebugBar\/Panel.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/DebugBar\/PluginExtension.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/DebugBar\/PluginExtension.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/DebugBar\/PluginPanel.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/DebugBar\/PluginPanel.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/DebugBar\/ThemePanel.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/DebugBar\/ThemePanel.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/InstalledPackage.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/InstalledPackage.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Metadata.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Metadata.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/OAuthSignature.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/OAuthSignature.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Plugin\/Package.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Plugin\/Package.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Plugin\/PluginInfo.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Plugin\/PluginInfo.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Plugin\/Ui.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Plugin\/Ui.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Plugin\/Update.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Plugin\/Update.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Plugin\/UpdateChecker.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Plugin\/UpdateChecker.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/PucFactory.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/PucFactory.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Scheduler.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Scheduler.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/StateStore.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/StateStore.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Theme\/Package.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Theme\/Package.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Theme\/Update.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Theme\/Update.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Theme\/UpdateChecker.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Theme\/UpdateChecker.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Update.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Update.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/UpdateChecker.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/UpdateChecker.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/UpgraderStatus.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/UpgraderStatus.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Utils.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Utils.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/Api.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/Api.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/BaseChecker.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/BaseChecker.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/BitBucketApi.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/BitBucketApi.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/GitHubApi.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/GitHubApi.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/GitLabApi.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/GitLabApi.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/PluginUpdateChecker.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/PluginUpdateChecker.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/Reference.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/Reference.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/ReleaseAssetSupport.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/ReleaseAssetSupport.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/ReleaseFilteringFeature.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/ReleaseFilteringFeature.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/ThemeUpdateChecker.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/ThemeUpdateChecker.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/VcsCheckerMethods.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/Vcs\/VcsCheckerMethods.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/WpCliCheckTrigger.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/Puc\/v5p6\/WpCliCheckTrigger.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/README.md" : {
+      "cB" : 0,
+      "cS" : 0,
+      "eF" : 1,
+      "eL" : 1,
+      "ema" : 1,
+      "eSQ" : 1,
+      "ft" : 4096,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/README.html",
+      "oF" : 1,
+      "oFM" : 0,
+      "oS" : 0,
+      "pHT" : 0,
+      "pME" : 1,
+      "rFN" : 0,
+      "uCM" : 0
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/vendor\/Parsedown.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/vendor\/Parsedown.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/vendor\/ParsedownModern.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/vendor\/ParsedownModern.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/vendor\/PucReadmeParser.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/includes\/plugin-update-checker\/vendor\/PucReadmeParser.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/index.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/js\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/js\/index.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/js\/script.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/js\/script.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/essential-seo-de_CH.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/essential-seo-de_CH.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/essential-seo-de_CH.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/essential-seo-de_CH.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/essential-seo-de_DE.mo" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/essential-seo-de_DE.mo",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/essential-seo-de_DE.po" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/essential-seo-de_DE.po",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/essential-seo.pot" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/essential-seo.pot",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/index.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/languages\/index.php",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/readme.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/readme.txt",
+      "oF" : 1
+    },
+    "\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/uninstall.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.claude\/worktrees\/interesting-wilbur-0163ce\/source\/uninstall.php",
+      "oF" : 1
+    },
+    "\/.gitattributes" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/.gitattributes",
+      "oF" : 1
+    },
     "\/.gitignore" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/build\/.gitignore",
-      "oF" : 0
+      "oF" : 1
     },
     "\/build" : {
       "ft" : 65536,
@@ -27,9 +1157,25 @@
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/build\/essential-seo.code-workspace",
+      "oF" : 1
+    },
+    "\/LICENSE" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/LICENSE",
       "oF" : 0
+    },
+    "\/RealTimeSyncTo-local-2026.ffs_real" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/RealTimeSyncTo-local-2026.ffs_real",
+      "oF" : 1
     },
     "\/source\/css\/index.php" : {
       "cB" : 0,
@@ -708,8 +1854,8 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/build\/js\/script-min.js",
-      "oF" : 0,
+      "oAP" : "\/build\/js\/script.js",
+      "oF" : 2,
       "sC" : 3,
       "tS" : 0
     },
@@ -761,6 +1907,25 @@
       "oAP" : "\/build\/languages\/index.php",
       "oF" : 0
     },
+    "\/source\/README.md" : {
+      "cB" : 0,
+      "cS" : 0,
+      "eF" : 1,
+      "eL" : 1,
+      "ema" : 1,
+      "eSQ" : 1,
+      "ft" : 4096,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/build\/README.html",
+      "oF" : 0,
+      "oFM" : 0,
+      "oS" : 0,
+      "pHT" : 0,
+      "pME" : 1,
+      "rFN" : 0,
+      "uCM" : 0
+    },
     "\/source\/readme.txt" : {
       "cB" : 0,
       "ft" : 8192,
@@ -782,7 +1947,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-pale",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 800198088.32752895
+    "lastBuiltDate" : 800203136.65441704
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

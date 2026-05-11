@@ -59,10 +59,12 @@ function esseo_main_meta_tags() {
         $share_img           = esc_attr(pll__($options['esseo_share_img']));
     }
 
-    $description = '';
-    $og_title    = '';
-    $og_type     = '';
-    $og_url      = '';
+    $description      = '';
+    $og_title         = '';
+    $og_type          = '';
+    $og_url           = '';
+    $share_img_width  = 0;
+    $share_img_height = 0;
 
     if (is_single() || (is_page() && !is_front_page())) {
 
@@ -73,17 +75,23 @@ function esseo_main_meta_tags() {
             $post_id         = get_the_ID();
             $esseo_meta_boxes = get_post_meta($post_id, 'esseo_meta_boxes', true);
 
-            $description = !empty($esseo_meta_boxes['description'])
-                ? esc_html(esc_attr($esseo_meta_boxes['description']))
-                : esc_html($default_description);
+            if (!empty($esseo_meta_boxes['description'])) {
+                $description = esc_html(esc_attr($esseo_meta_boxes['description']));
+            } elseif (has_excerpt()) {
+                $description = esc_html(wp_strip_all_tags(get_the_excerpt()));
+            } else {
+                $description = esc_html($default_description);
+            }
 
             $og_title = '<meta property="og:title" content="' . esc_attr(get_the_title()) . ' ' . $default_title_seperator . ' ' . $default_title . '">';
             $og_type  = '<meta property="og:type" content="article">';
             $og_url   = '<meta property="og:url" content="' . esc_url(get_permalink()) . '">';
 
             if (has_post_thumbnail()) {
-                $thumbnail_img = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'large');
-                $share_img     = $thumbnail_img[0];
+                $thumbnail_img    = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'large');
+                $share_img        = $thumbnail_img[0];
+                $share_img_width  = $thumbnail_img[1];
+                $share_img_height = $thumbnail_img[2];
             }
 
         }
@@ -129,6 +137,10 @@ function esseo_main_meta_tags() {
 
         if (!empty($share_img)) {
             ?><meta property="og:image" content="<?php echo esc_attr($share_img); ?>"><?php
+            if (!empty($share_img_width)) {
+                ?><meta property="og:image:width" content="<?php echo (int) $share_img_width; ?>"><?php
+                ?><meta property="og:image:height" content="<?php echo (int) $share_img_height; ?>"><?php
+            }
         }
 
     }

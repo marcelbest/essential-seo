@@ -12,7 +12,9 @@ A simple SEO WordPress plugin, which provides just the essentials. It works well
 
 == Description ==
 
-This SEO WordPress plugin provides just the essentials needed to make your WordPress site fully search engine friendly with just a few settings. After installation go to the settings page, make your settings, and you are all set. Besides that you can set a custom meta-description per page or post.
+This SEO WordPress plugin provides just the essentials needed to make your WordPress site fully search engine friendly with just a few settings. After installation go to the settings page, make your settings, and you are all set.
+
+Each post and page gets a custom meta description field. If left empty, the plugin falls back to the post excerpt, and if that is also empty, to the site-wide default description set in the plugin settings.
 
 The plugin is not dependent on Polylang, but works well with it for multi-language websites. For tracking, paste your complete GA4 or GTM snippet into the Scripts field — preconnect hints and the GTM noscript fallback are added automatically.
 
@@ -40,6 +42,7 @@ The plugin is not dependent on Polylang, but works well with it for multi-langua
 * Removed Mobile_Detect library dependency
 * Update checker switched from self-hosted to GitHub
 * SCSS source files added
+* Meta description now falls back to post excerpt, then to global default
 * Requires WordPress 6.0 or higher
 
 = 1.0.7 =

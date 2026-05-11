@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || die( 'No direct script access allowed!' );
 
 require_once 'plugin-update-checker/plugin-update-checker.php';
 
-$esseo_UpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+$esseo_UpdateChecker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
     'https://github.com/marcelbest/essential-seo/',
     ESSEO_PLUGIN,
     ESSEO_PLUGIN_NAME
@@ -37,7 +37,7 @@ function esseo_install() {
 
     // Creates new database field
     // And auto loads the settings -> 'yes'
-    add_option("esseo_options", '', '', 'yes');
+    add_option("esseo_options", '', '', true);
 
     // Saves the state of the plugin
     // @link https://codex.wordpress.org/Function_Reference/set_transient
@@ -58,22 +58,11 @@ function esseo_install() {
 
 register_activation_hook(ESSEO_PLUGIN, 'esseo_install'); 
 
-// Plugin deactivation
+// Plugin deactivation — data is preserved; cleanup happens in uninstall.php
 function esseo_remove() {
 
-    // Deletes the database field
-    delete_option('esseo_options');
-
-    // Delete postmeta
-    // meta_key: esseo_meta_boxes
-    // @link https://developer.wordpress.org/reference/functions/delete_post_meta/
-    // @link https://codex.wordpress.org/Function_Reference/delete_post_meta
-    delete_post_meta_by_key('esseo_meta_boxes');
-
-    // $esseo_allposts = get_posts('numberposts=-1&post_type=post&post_status=any');
-    // foreach($esseo_allposts as $postinfo){
-    //     delete_post_meta($postinfo->ID, 'esseo_meta_boxes');
-    // }
+    delete_transient('essential-seo-activation');
+    delete_transient('essential-seo-translation-possible');
 
 }
 
@@ -740,8 +729,14 @@ function esseo_validate_options($input) {
  * @return echoes output
  */
 function esseo_form_field_fn($args = array()) {
-     
-    extract($args);
+
+    $type        = isset($args['type'])        ? $args['type']        : '';
+    $id          = isset($args['id'])          ? $args['id']          : '';
+    $desc        = isset($args['desc'])        ? $args['desc']        : '';
+    $std         = isset($args['std'])         ? $args['std']         : '';
+    $choices     = isset($args['choices'])     ? $args['choices']     : array();
+    $maxlength   = isset($args['maxlength'])   ? $args['maxlength']   : '';
+    $field_class = isset($args['field_class']) ? $args['field_class'] : '';
 
     // get the settings sections array
     $settings_output    = esseo_get_settings();
@@ -800,8 +795,8 @@ function esseo_form_field_fn($args = array()) {
         case 'select':
             echo "<select id='$id' class='select$field_class' name='" . $esseo_option_name . "[$id]'>";
                 foreach($choices as $item) {
-                    $value  = esc_attr($item, 'essential-seo');
-                    $item   = esc_html($item, 'essential-seo');
+                    $value  = esc_attr($item);
+                    $item   = esc_html($item);
                      
                     $selected = ($options[$id]==$value) ? 'selected="selected"' : '';
                     echo "<option value='$value' $selected>$item</option>";
@@ -872,8 +867,16 @@ function esseo_create_settings_field( $args = array() ) {
         'field_class'   => ''                            // the HTML form element field_class. Also used for validation purposes!
     );
      
-    // "extract" to be able to use the array keys as variables in our function output below
-    extract( wp_parse_args( $args, $defaults ) );
+    $parsed      = wp_parse_args($args, $defaults);
+    $id          = $parsed['id'];
+    $title       = $parsed['title'];
+    $desc        = $parsed['desc'];
+    $std         = $parsed['std'];
+    $type        = $parsed['type'];
+    $section     = $parsed['section'];
+    $choices     = $parsed['choices'];
+    $maxlength   = $parsed['maxlength'];
+    $field_class = $parsed['field_class'];
      
     // additional arguments for use in form field output in the function esseo_form_field_fn!
     $field_args = array(
@@ -905,7 +908,7 @@ function esseo_create_settings_field( $args = array() ) {
 function esseo_show_msg($message, $msgclass = 'info') {
 
     // hidden with css, but needed for error handling with jQuery
-    echo "<div class='esseo-message' class='$msgclass'>$message</div>";
+    echo "<div class='esseo-message $msgclass'>$message</div>";
 }
 
 /**
@@ -960,6 +963,6 @@ function esseo_options_page_style($hook){
     }
 
     // https://codex.wordpress.org/Function_Reference/plugin_dir_url
-    wp_enqueue_style('esseo-style', plugin_dir_url( ESSEO_PLUGIN ).'css/style.css');
-    wp_enqueue_script( 'esseo-script', plugin_dir_url( ESSEO_PLUGIN ).'js/script.js', array('jquery'));
+    wp_enqueue_style('esseo-style', plugin_dir_url( ESSEO_PLUGIN ).'css/style.css', array(), ESSEO_VERSION);
+    wp_enqueue_script('esseo-script', plugin_dir_url( ESSEO_PLUGIN ).'js/script.js', array('jquery'), ESSEO_VERSION, true);
 }

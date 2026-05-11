@@ -11,6 +11,9 @@ build/
 .DS_Store
 Thumbs.db
 
+# Ignore Claude Code working directory
+.claude/
+
 # Ignore environment and secret files
 .env
 config.json

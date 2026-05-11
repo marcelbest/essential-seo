@@ -12,22 +12,22 @@ add_action('plugins_loaded', 'esseo_register_polylang_strings');
 
 function esseo_register_polylang_strings() {
 
-    if (!function_exists('pll_the_languages')) return;
+    if ( ! function_exists( 'pll_the_languages' ) ) return;
 
     $options = get_option('esseo_options');
     $registered = false;
 
-    if (!empty($options['esseo_default_description'])) {
+    if ( ! empty( $options['esseo_default_description'] ) ) {
         pll_register_string(__('Default description', 'essential-seo'), $options['esseo_default_description'], 'Essential SEO');
         $registered = true;
     }
 
-    if (!empty($options['esseo_share_img'])) {
+    if ( ! empty( $options['esseo_share_img'] ) ) {
         pll_register_string(__('Default share image', 'essential-seo'), $options['esseo_share_img'], 'Essential SEO');
         $registered = true;
     }
 
-    if ($registered) {
+    if ( $registered ) {
         set_transient('essential-seo-translation-possible', true, 0);
     } else {
         delete_transient('essential-seo-translation-possible');
@@ -54,7 +54,7 @@ function esseo_main_meta_tags() {
     $default_description = isset($options['esseo_default_description']) ? esc_attr($options['esseo_default_description']) : '';
     $share_img           = isset($options['esseo_share_img']) ? esc_attr($options['esseo_share_img']) : '';
 
-    if (function_exists('pll_the_languages')) {
+    if ( function_exists( 'pll_the_languages' ) ) {
         $default_description = esc_attr(pll__($options['esseo_default_description']));
         $share_img           = esc_attr(pll__($options['esseo_share_img']));
     }
@@ -66,7 +66,7 @@ function esseo_main_meta_tags() {
     $share_img_width  = 0;
     $share_img_height = 0;
 
-    if (is_single() || (is_page() && !is_front_page())) {
+    if ( is_single() || ( is_page() && ! is_front_page() ) ) {
 
         while (have_posts()) {
 
@@ -75,7 +75,7 @@ function esseo_main_meta_tags() {
             $post_id         = get_the_ID();
             $esseo_meta_boxes = get_post_meta($post_id, 'esseo_meta_boxes', true);
 
-            if (!empty($esseo_meta_boxes['description'])) {
+            if ( ! empty( $esseo_meta_boxes['description'] ) ) {
                 $description = esc_html(esc_attr($esseo_meta_boxes['description']));
             } elseif (has_excerpt()) {
                 $description = esc_html(wp_strip_all_tags(get_the_excerpt()));
@@ -87,8 +87,8 @@ function esseo_main_meta_tags() {
             $og_type  = '<meta property="og:type" content="article">';
             $og_url   = '<meta property="og:url" content="' . esc_url(get_permalink()) . '">';
 
-            if (has_post_thumbnail()) {
-                $thumbnail_img    = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'large');
+            if ( has_post_thumbnail() ) {
+                $thumbnail_img    = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' );
                 $share_img        = $thumbnail_img[0];
                 $share_img_width  = $thumbnail_img[1];
                 $share_img_height = $thumbnail_img[2];
@@ -102,12 +102,12 @@ function esseo_main_meta_tags() {
         $og_title    = '<meta property="og:title" content="' . $default_title . '">';
 
         $categories = get_the_category();
-        if (!empty($categories) && !is_front_page()) {
+        if ( ! empty( $categories ) && ! is_front_page() ) {
             $og_title = '<meta property="og:title" content="' . esc_attr($categories[0]->name) . ' ' . $default_title_seperator . ' ' . $default_title . '">';
         }
 
         $tag = single_tag_title('', false);
-        if (!empty($tag)) {
+        if ( ! empty( $tag ) ) {
             $og_title = '<meta property="og:title" content="' . esc_attr($tag) . ' ' . $default_title_seperator . ' ' . $default_title . '">';
         }
 
@@ -117,12 +117,12 @@ function esseo_main_meta_tags() {
     }
 
     // Description
-    if (!empty($description)) {
+    if ( ! empty( $description ) ) {
         ?><meta name="description" content="<?php echo $description; ?>"><?php
     }
 
     // Open Graph
-    if (!empty($options['esseo_checkbox_og'])) {
+    if ( ! empty( $options['esseo_checkbox_og'] ) ) {
 
         echo $og_title;
         echo $og_type;
@@ -131,13 +131,13 @@ function esseo_main_meta_tags() {
         ?><meta property="og:locale" content="<?php echo get_locale(); ?>"><?php
         ?><meta property="og:site_name" content="<?php echo $default_title; ?>"><?php
 
-        if (!empty($description)) {
+        if ( ! empty( $description ) ) {
             ?><meta property="og:description" content="<?php echo $description; ?>"><?php
         }
 
-        if (!empty($share_img)) {
-            ?><meta property="og:image" content="<?php echo esc_attr($share_img); ?>"><?php
-            if (!empty($share_img_width)) {
+        if ( ! empty( $share_img ) ) {
+            ?><meta property="og:image" content="<?php echo esc_attr( $share_img ); ?>"><?php
+            if ( ! empty( $share_img_width ) ) {
                 ?><meta property="og:image:width" content="<?php echo (int) $share_img_width; ?>"><?php
                 ?><meta property="og:image:height" content="<?php echo (int) $share_img_height; ?>"><?php
             }
@@ -159,7 +159,7 @@ function esseo_add_open_graph_prefix() {
 
     $options = get_option('esseo_options');
 
-    if (!empty($options['esseo_checkbox_og'])) {
+    if ( ! empty( $options['esseo_checkbox_og'] ) ) {
         add_filter('language_attributes', 'esseo_opengraph_doctype');
     }
 
@@ -181,7 +181,7 @@ function esseo_document_title_separator($sep) {
 
     $options = get_option('esseo_options');
 
-    if (!empty($options['esseo_title_seperator'])) {
+    if ( ! empty( $options['esseo_title_seperator'] ) ) {
         $sep = $options['esseo_title_seperator'];
     }
 
@@ -203,13 +203,13 @@ function esseo_add_header_scripts() {
     $options = get_option('esseo_options');
     $scripts = isset($options['esseo_header_scripts']) ? trim($options['esseo_header_scripts']) : '';
 
-    if (empty($scripts)) return;
+    if ( empty( $scripts ) ) return;
 
-    if (strpos($scripts, 'google-analytics.com') !== false) {
+    if ( strpos( $scripts, 'google-analytics.com' ) !== false ) {
         echo '<link rel="preconnect" href="https://www.google-analytics.com">' . "\n";
     }
 
-    if (strpos($scripts, 'googletagmanager.com') !== false) {
+    if ( strpos( $scripts, 'googletagmanager.com' ) !== false ) {
         echo '<link rel="preconnect" href="https://www.googletagmanager.com">' . "\n";
     }
 
@@ -231,9 +231,9 @@ function esseo_add_gtm_noscript() {
     $options = get_option('esseo_options');
     $scripts = isset($options['esseo_header_scripts']) ? $options['esseo_header_scripts'] : '';
 
-    if (empty($scripts)) return;
+    if ( empty( $scripts ) ) return;
 
-    if (preg_match('/GTM-[A-Z0-9]+/', $scripts, $matches)) {
+    if ( preg_match( '/GTM-[A-Z0-9]+/', $scripts, $matches ) ) {
         $gtm_id = esc_attr($matches[0]);
         echo '<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=' . $gtm_id . '" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>' . "\n";
     }

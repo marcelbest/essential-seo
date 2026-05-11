@@ -19,13 +19,13 @@ defined( 'ABSPATH' ) || die( 'No direct script access allowed!' );
  * Define Constant(s)
  */
 
-define('ESSEO_VERSION', '1.1.0');
-define('ESSEO_PLUGIN', __FILE__ );
-define('ESSEO_PLUGIN_BASENAME', plugin_basename( ESSEO_PLUGIN ) );
-define('ESSEO_PLUGIN_NAME', trim( dirname( ESSEO_PLUGIN_BASENAME ), '/' ) );
-define('ESSEO_SHORTNAME', 'esseo');
-define('ESSEO_PLUGIN_DIR', untrailingslashit( dirname( __FILE__ ) ) );
+define( 'ESSEO_VERSION', '1.1.0' );
+define( 'ESSEO_PLUGIN', __FILE__ );
+define( 'ESSEO_PLUGIN_BASENAME', plugin_basename( ESSEO_PLUGIN ) );
+define( 'ESSEO_PLUGIN_NAME', trim( dirname( ESSEO_PLUGIN_BASENAME ), '/' ) );
+define( 'ESSEO_SHORTNAME', 'esseo' );
+define( 'ESSEO_PLUGIN_DIR', untrailingslashit( dirname( __FILE__ ) ) );
 
-require_once ESSEO_PLUGIN_DIR.'/includes/functions.php';
-require ESSEO_PLUGIN_DIR.'/includes/meta_boxes.php';
-require ESSEO_PLUGIN_DIR.'/includes/html_header.php';
+require_once ESSEO_PLUGIN_DIR . '/includes/functions.php';
+require ESSEO_PLUGIN_DIR . '/includes/meta_boxes.php';
+require ESSEO_PLUGIN_DIR . '/includes/html_header.php';

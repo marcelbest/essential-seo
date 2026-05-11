@@ -2,9 +2,9 @@
 Contributors: Marcel Best
 Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
-Requires at least: 4.6
-Tested up to: 5.0.3
-Stable tag: 1.0.7
+Requires at least: 6.0
+Tested up to: 6.9.4
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,9 @@ A simple SEO WordPress plugin, which provides just the essentials. It works well
 
 == Description ==
 
-This SEO WordPress plugin provides just the essentials needed to make your WordPress site fully search engine friendly with just a few settings. After installation go to the settings page, make your settings. and you are all set. Besides that you can now set a custom meta-description per page or post. If a post uses tags, they will be used as keywords. Pages do not have this setting, they always use the default keywords. This plugin is not dependent on Polylang, but it works well with it for multi-language websites. For tracking purposes you can provide a Google Analytics ID and the Google script will be set up in your website's header section.
+This SEO WordPress plugin provides just the essentials needed to make your WordPress site fully search engine friendly with just a few settings. After installation go to the settings page, make your settings, and you are all set. Besides that you can set a custom meta-description per page or post.
+
+The plugin is not dependent on Polylang, but works well with it for multi-language websites. For tracking, paste your complete GA4 or GTM snippet into the Scripts field — preconnect hints and the GTM noscript fallback are added automatically.
 
 == Installation ==
 
@@ -25,6 +27,20 @@ This SEO WordPress plugin provides just the essentials needed to make your WordP
 == Screenshots ==
 
 == Changelog ==
+
+= 1.1.0 =
+
+* Modernised for WordPress 6.x
+* Fixed nested function declarations (potential fatal error)
+* Removed robots meta handling — WordPress manages this natively since 5.7
+* Removed keywords meta tag (ignored by search engines since 2009)
+* Replaced separate GA/GTM ID fields with a single free-form Header Scripts field
+* Preconnect hints for Google domains added automatically from script snippet
+* GTM noscript fallback in footer added automatically from script snippet
+* Removed Mobile_Detect library dependency
+* Update checker switched from self-hosted to GitHub
+* SCSS source files added
+* Requires WordPress 6.0 or higher
 
 = 1.0.7 =
 

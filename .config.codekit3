@@ -96,15 +96,15 @@
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/.editorconfig",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/composer.json" : {
       "ft" : 524288,
-      "oA" : 1,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/composer-min.json",
-      "oF" : 0,
+      "oF" : 1,
       "oO" : 1,
       "oS" : 1
     },
@@ -115,24 +115,24 @@
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/css\/puc-debug-bar-min.css",
-      "oF" : 0,
+      "oF" : 1,
       "pg" : 0
     },
     "\/source\/includes\/plugin-update-checker\/examples\/plugin.json" : {
       "ft" : 524288,
-      "oA" : 1,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/examples\/plugin-min.json",
-      "oF" : 0,
+      "oF" : 1,
       "oO" : 1,
       "oS" : 1
     },
     "\/source\/includes\/plugin-update-checker\/examples\/theme.json" : {
       "ft" : 524288,
-      "oA" : 1,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/examples\/theme-min.json",
-      "oF" : 0,
+      "oF" : 1,
       "oO" : 1,
       "oS" : 1
     },
@@ -141,9 +141,9 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/js\/debug-bar-min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 0
     },
@@ -151,497 +151,497 @@
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-cs_CZ.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-cs_CZ.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-cs_CZ.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-da_DK.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-da_DK.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-da_DK.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-da_DK.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-de_DE.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-de_DE.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-de_DE.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-de_DE.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fa_IR.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fa_IR.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fa_IR.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fa_IR.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_CA.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_CA.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_CA.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_CA.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_FR.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_FR.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_FR.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-fr_FR.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-hu_HU.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-hu_HU.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-hu_HU.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-hu_HU.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-it_IT.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-it_IT.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-it_IT.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-it_IT.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ja.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ja.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ja.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-ja.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_BE.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_BE.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_BE.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_BE.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_NL.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_NL.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_NL.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-nl_NL.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-pt_BR.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-pt_BR.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-pt_BR.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-pt_BR.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sv_SE.mo" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sv_SE.mo",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sv_SE.po" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker-sv_SE.po",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/languages\/plugin-update-checker.pot" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/languages\/plugin-update-checker.pot",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/license.txt" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/license.txt",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/plugin-update-checker.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/plugin-update-checker.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4\/Factory.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4\/Factory.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Autoloader.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Autoloader.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/DebugBar\/Extension.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/DebugBar\/Extension.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/DebugBar\/Panel.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/DebugBar\/Panel.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/DebugBar\/PluginExtension.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/DebugBar\/PluginExtension.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/DebugBar\/PluginPanel.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/DebugBar\/PluginPanel.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/DebugBar\/ThemePanel.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/DebugBar\/ThemePanel.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Factory.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Factory.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/InstalledPackage.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/InstalledPackage.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Metadata.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Metadata.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/OAuthSignature.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/OAuthSignature.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Plugin\/Info.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Plugin\/Info.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Plugin\/Package.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Plugin\/Package.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Plugin\/Ui.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Plugin\/Ui.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Plugin\/Update.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Plugin\/Update.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Plugin\/UpdateChecker.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Plugin\/UpdateChecker.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Scheduler.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Scheduler.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/StateStore.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/StateStore.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Theme\/Package.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Theme\/Package.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Theme\/Update.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Theme\/Update.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Theme\/UpdateChecker.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Theme\/UpdateChecker.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Update.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Update.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/UpdateChecker.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/UpdateChecker.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/UpgraderStatus.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/UpgraderStatus.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Utils.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Utils.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/Api.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/Api.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/BaseChecker.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/BaseChecker.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/BitBucketApi.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/BitBucketApi.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/GitHubApi.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/GitHubApi.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/GitLabApi.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/GitLabApi.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/PluginUpdateChecker.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/PluginUpdateChecker.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/Reference.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/Reference.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/ThemeUpdateChecker.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/Puc\/v4p4\/Vcs\/ThemeUpdateChecker.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/README.md" : {
       "cB" : 0,
@@ -652,9 +652,9 @@
       "eSQ" : 1,
       "ft" : 4096,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/README.html",
-      "oF" : 0,
+      "oF" : 1,
       "oFM" : 0,
       "oS" : 0,
       "pHT" : 0,
@@ -666,25 +666,25 @@
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/vendor\/Parsedown.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/vendor\/ParsedownLegacy.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/vendor\/ParsedownLegacy.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/includes\/plugin-update-checker\/vendor\/readme-parser.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 2,
       "oAP" : "\/build\/includes\/plugin-update-checker\/vendor\/readme-parser.php",
-      "oF" : 0
+      "oF" : 1
     },
     "\/source\/index.php" : {
       "cB" : 0,
@@ -781,7 +781,8 @@
     "displayValue" : "essential-seo",
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-pale",
-    "iconImageWasSetByUser" : 0
+    "iconImageWasSetByUser" : 0,
+    "lastBuiltDate" : 800198088.32752895
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -1849,7 +1850,7 @@
     },
     "languageDefaultsJS" : {
       "autoOutputAction" : 0,
-      "autoOutputPathFilenamePattern" : "*-min.js",
+      "autoOutputPathFilenamePattern" : "*.js",
       "autoOutputPathRelativePath" : "\/min",
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",

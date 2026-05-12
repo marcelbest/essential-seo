@@ -17,6 +17,10 @@ Thumbs.db
 # Ignore CodeKit project config (local only)
 .config.codekit3
 
+# Ignore release artifacts (local only)
+create-release-zip.sh
+*.zip
+
 # Ignore environment and secret files
 .env
 config.json

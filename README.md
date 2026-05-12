@@ -51,7 +51,7 @@ source/
 1. Make your changes in `source/`
 2. Bump the version in `source/essential-seo.php` and `source/readme.txt`
 3. Build with CodeKit
-4. Run `bash create-release-zip.sh` to generate the ZIP
+4. Double-click `create-release-zip.command` to generate the ZIP
 5. Push commits to GitHub
 6. On GitHub: Releases → Draft a new release → set tag to `v1.x.x` → upload the ZIP as asset
 

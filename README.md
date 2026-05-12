@@ -48,7 +48,14 @@ source/
 
 ### Releases
 
-Bump the version in `essential-seo.php` and `readme.txt`, then create a matching release tag on GitHub. The plugin update checker picks it up automatically.
+1. Make your changes in `source/`
+2. Bump the version in `source/essential-seo.php` and `source/readme.txt`
+3. Build with CodeKit
+4. Run `bash create-release-zip.sh` to generate the ZIP
+5. Push commits to GitHub
+6. On GitHub: Releases → Draft a new release → set tag to `v1.x.x` → upload the ZIP as asset
+
+The plugin update checker picks up the new tag automatically and notifies WordPress sites with the plugin installed.
 
 ## License
 

@@ -17,9 +17,13 @@ A simple SEO WordPress plugin that provides just the essentials. Works well with
 
 ## Installation
 
-1. Upload the `essential-seo` folder to `/wp-content/plugins/`
-2. Activate the plugin via the WordPress Plugins screen
-3. Go to **Settings → Essential SEO** to configure
+1. Download the latest `essential-seo-v*.zip` from the [Releases](https://github.com/marcelbest/essential-seo/releases) page
+2. In WordPress, go to **Plugins → Add New → Upload Plugin**
+3. Upload the ZIP and click **Install Now**
+4. Activate the plugin
+5. Go to **Settings → Essential SEO** to configure
+
+Once installed, the plugin checks for updates automatically — future updates appear in the WordPress dashboard like any other plugin.
 
 ## Development
 

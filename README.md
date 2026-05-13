@@ -5,6 +5,7 @@ A simple SEO WordPress plugin that provides just the essentials. Works well with
 ## Features
 
 - Custom meta description per post and page (falls back to excerpt, then to site default)
+- Category, tag and custom taxonomy descriptions used as meta description when set
 - Open Graph meta tags
 - Configurable title separator
 - Free-form header scripts field (GA4, GTM, etc.) with automatic preconnect hints and GTM noscript fallback

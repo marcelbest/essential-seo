@@ -101,6 +101,13 @@ function esseo_main_meta_tags() {
         $description = esc_html($default_description);
         $og_title    = '<meta property="og:title" content="' . $default_title . '">';
 
+        if ( is_category() || is_tag() || is_tax() ) {
+            $term_description = term_description();
+            if ( ! empty( $term_description ) ) {
+                $description = esc_html(wp_strip_all_tags($term_description));
+            }
+        }
+
         $categories = get_the_category();
         if ( ! empty( $categories ) && ! is_front_page() ) {
             $og_title = '<meta property="og:title" content="' . esc_attr($categories[0]->name) . ' ' . $default_title_seperator . ' ' . $default_title . '">';

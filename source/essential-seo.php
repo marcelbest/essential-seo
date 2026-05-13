@@ -3,7 +3,7 @@
 Plugin Name: Essential SEO
 Plugin URI: https://github.com/marcelbest/essential-seo
 Description: A simple SEO WordPress plugin, which provides just the essentials. It works well together with Polylang.
-Version: 1.1.0
+Version: 1.1.1
 Author: Marcel Best
 Author URI: https://marcelbest.com
 License: GPLv2 or later

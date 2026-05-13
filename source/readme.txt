@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
 Tested up to: 6.9.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,10 @@ The plugin is not dependent on Polylang, but works well with it for multi-langua
 == Screenshots ==
 
 == Changelog ==
+
+= 1.1.1 =
+
+* Category, tag and custom taxonomy descriptions are now used as meta description when set
 
 = 1.1.0 =
 

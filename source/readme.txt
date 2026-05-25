@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,10 +30,15 @@ The plugin is not dependent on Polylang, but works well with it for multi-langua
 
 == Changelog ==
 
+= 1.1.3 =
+
+* Fixed automatic plugin updates — all previous versions could never be installed via the WordPress update mechanism due to a misconfigured ZIP source in the update checker
+
 = 1.1.2 =
 
 * Fixed PHP 8.5 fatal error on settings page when options have never been saved
 * Fixed PHP 8.5 fatal error when post thumbnail image size is unavailable
+* Fixed automatic plugin updates installing incorrectly due to wrong ZIP source
 * Tested with WordPress 7.0
 
 = 1.1.1 =

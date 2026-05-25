@@ -17,6 +17,8 @@ $esseo_UpdateChecker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdat
     ESSEO_PLUGIN_NAME
 );
 
+$esseo_UpdateChecker->getVcsApi()->enableReleaseAssets();
+
 /**
  * Load plugin textdomain.
  * 

@@ -3,8 +3,8 @@ Contributors: Marcel Best
 Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
-Tested up to: 6.9.4
-Stable tag: 1.1.1
+Tested up to: 7.0
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,12 @@ The plugin is not dependent on Polylang, but works well with it for multi-langua
 == Screenshots ==
 
 == Changelog ==
+
+= 1.1.2 =
+
+* Fixed PHP 8.5 fatal error on settings page when options have never been saved
+* Fixed PHP 8.5 fatal error when post thumbnail image size is unavailable
+* Tested with WordPress 7.0
 
 = 1.1.1 =
 

@@ -743,8 +743,13 @@ function esseo_form_field_fn( $args = array() ) {
     $esseo_option_name = $settings_output['esseo_option_name'];
     $options           = get_option( $esseo_option_name );
 
+    // Ensure options is an array (get_option returns '' if never saved)
+    if ( ! is_array( $options ) ) {
+        $options = [];
+    }
+
     // pass the standard value if the option is not yet set in the database
-    if ( ! isset( $options[$id] ) && 'type' != 'checkbox' ) {
+    if ( ! isset( $options[$id] ) && $type != 'checkbox' ) {
         $options[$id] = $std;
     }
 

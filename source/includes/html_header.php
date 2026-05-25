@@ -88,10 +88,12 @@ function esseo_main_meta_tags() {
             $og_url   = '<meta property="og:url" content="' . esc_url(get_permalink()) . '">';
 
             if ( has_post_thumbnail() ) {
-                $thumbnail_img    = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' );
-                $share_img        = $thumbnail_img[0];
-                $share_img_width  = $thumbnail_img[1];
-                $share_img_height = $thumbnail_img[2];
+                $thumbnail_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' );
+                if ( $thumbnail_img ) {
+                    $share_img        = $thumbnail_img[0];
+                    $share_img_width  = $thumbnail_img[1];
+                    $share_img_height = $thumbnail_img[2];
+                }
             }
 
         }

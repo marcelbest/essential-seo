@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,11 @@ The plugin is not dependent on Polylang, but works well with it for multi-langua
 6. The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more. ![HTML head output](https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png)
 
 == Changelog ==
+
+= 1.1.5 =
+
+* Added plugin banner and screenshots to the WordPress plugin details popup
+* Updated meta description character count guidance (recommended 150–160 chars)
 
 = 1.1.4 =
 

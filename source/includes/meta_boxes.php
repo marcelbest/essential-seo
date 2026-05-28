@@ -51,7 +51,7 @@ function esseo_show_seo_meta_boxes() {
     // SEO description
     ?><p><?php
 
-        ?><label for="esseo_meta_boxes[description]"><?php _e( 'Meta description (about 250 to 320 chars) — leave empty to use the excerpt or the site default', 'essential-seo' ); ?></label><?php
+        ?><label for="esseo_meta_boxes[description]"><?php _e( 'Meta description (recommended: 150–160 chars, max. 320) — leave empty to use the excerpt or the site default', 'essential-seo' ); ?></label><?php
         ?><br><?php
         ?><textarea name="esseo_meta_boxes[description]" id="esseo_meta_boxes[description]" rows="2" cols="30" style="width:100%;" maxlength="320"><?php
 

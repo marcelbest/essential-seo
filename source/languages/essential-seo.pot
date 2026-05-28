@@ -170,8 +170,8 @@ msgstr ""
 
 #: includes/meta_boxes.php
 msgid ""
-"Meta description (about 250 to 320 chars) — leave empty to use the excerpt "
-"or the site default"
+"Meta description (recommended: 150–160 chars, max. 320) — leave empty to "
+"use the excerpt or the site default"
 msgstr ""
 
 #: includes/meta_boxes.php

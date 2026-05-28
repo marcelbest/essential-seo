@@ -196,11 +196,11 @@ msgstr "SEO"
 
 #: includes/meta_boxes.php
 msgid ""
-"Meta description (about 250 to 320 chars) — leave empty to use the excerpt "
-"or the site default"
+"Meta description (recommended: 150–160 chars, max. 320) — leave empty to "
+"use the excerpt or the site default"
 msgstr ""
-"Meta-Beschreibung (ca. 250 bis 320 Zeichen) — leer lassen um den Auszug "
-"oder die Website-Standardbeschreibung zu verwenden"
+"Meta-Beschreibung (empfohlen: 150–160 Zeichen, max. 320) — leer lassen um "
+"den Auszug oder die Website-Standardbeschreibung zu verwenden"
 
 #: includes/meta_boxes.php
 msgid ""

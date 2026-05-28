@@ -28,12 +28,12 @@ The plugin is not dependent on Polylang, but works well with it for multi-langua
 
 == Screenshots ==
 
-1. The plugin is accessible under Settings → Essential SEO in the WordPress admin menu.
-2. The settings page lets you configure the title separator, default description, share image and tracking scripts.
-3. The SEO meta box can be enabled per editor via Preferences → Document settings → SEO.
-4. The SEO meta box on a page — enter a custom meta description or leave empty to fall back to the excerpt or site default.
-5. The SEO meta box works the same way on posts.
-6. The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
+1. The plugin is accessible under Settings → Essential SEO in the WordPress admin menu. ![Settings menu](https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-1.png)
+2. The settings page lets you configure the title separator, default description, share image and tracking scripts. ![Settings page](https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-2.png)
+3. The SEO meta box can be enabled per editor via Preferences → Document settings → SEO. ![Enable meta box](https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-3.png)
+4. The SEO meta box on a page — enter a custom meta description or leave empty to fall back to the excerpt or site default. ![Meta box on page](https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-4.png)
+5. The SEO meta box works the same way on posts. ![Meta box on post](https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-5.png)
+6. The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more. ![HTML head output](https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png)
 
 == Changelog ==
 

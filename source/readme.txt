@@ -4,11 +4,11 @@ Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A simple SEO WordPress plugin, which provides just the essentials. It works well together with Polylang.
+A simple SEO WordPress plugin, which provides just the essentials.
 
 == Description ==
 
@@ -16,7 +16,9 @@ This SEO WordPress plugin provides just the essentials needed to make your WordP
 
 Each post and page gets a custom meta description field. If left empty, the plugin falls back to the post excerpt, and if that is also empty, to the site-wide default description set in the plugin settings.
 
-The plugin is not dependent on Polylang, but works well with it for multi-language websites. For tracking, paste your complete GA4 or GTM snippet into the Scripts field — preconnect hints and the GTM noscript fallback are added automatically.
+Posts and pages can individually be marked as noindex directly in the editor — they are excluded from the WordPress sitemap automatically.
+
+For tracking, paste your complete GA4 or GTM snippet into the Scripts field — preconnect hints and the GTM noscript fallback are added automatically.
 
 == Installation ==
 
@@ -38,6 +40,10 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 6. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png — The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
 
 == Changelog ==
+
+= 1.2.1 =
+
+* Removed Polylang integration
 
 = 1.2.0 =
 

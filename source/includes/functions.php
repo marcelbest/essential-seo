@@ -214,36 +214,6 @@ function esseo_settings_page_fn() {
 
         ?></p><?php
 
-        // Check for transient
-        if ( get_transient( 'essential-seo-translation-possible' ) ) {
-
-            ?><div class="polylang-notice"><?php
-
-                // Do translations here
-                ?><p><strong><?php
-
-                    _e('Great', 'essential-seo');
-
-                    ?>!</strong> <?php
-
-                    _e('You have Polylang installed. You can translate your default settings for all languages here', 'essential-seo');
-
-                ?>:</p><?php
-
-                ?><p><?php
-
-                    ?><a href="admin.php?page=mlang_strings&s&group=Essential+SEO&paged=1"><?php
-
-                        _e('Go to Polylang settings', 'essential-seo');
-
-                    ?></a><?php
-
-                ?></p><?php
-
-            ?></div><?php
-
-        }
-
         ?><form action="options.php" method="post"><?php
 
             // http://codex.wordpress.org/Function_Reference/settings_fields

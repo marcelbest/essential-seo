@@ -4,39 +4,6 @@
 defined( 'ABSPATH' ) || die( 'No direct script access allowed!' );
 
 /**
- * Register translatable strings with Polylang
- *
- * @link https://polylang.wordpress.com/documentation/documentation-for-developers/functions-reference/
- */
-add_action('plugins_loaded', 'esseo_register_polylang_strings');
-
-function esseo_register_polylang_strings() {
-
-    if ( ! function_exists( 'pll_the_languages' ) ) return;
-
-    $options = get_option('esseo_options');
-    $registered = false;
-
-    if ( ! empty( $options['esseo_default_description'] ) ) {
-        pll_register_string(__('Default description', 'essential-seo'), $options['esseo_default_description'], 'Essential SEO');
-        $registered = true;
-    }
-
-    if ( ! empty( $options['esseo_share_img'] ) ) {
-        pll_register_string(__('Default share image', 'essential-seo'), $options['esseo_share_img'], 'Essential SEO');
-        $registered = true;
-    }
-
-    if ( $registered ) {
-        set_transient('essential-seo-translation-possible', true, 0);
-    } else {
-        delete_transient('essential-seo-translation-possible');
-    }
-
-}
-
-
-/**
  * Meta tags in <head>
  *
  * @link https://developer.wordpress.org/reference/hooks/wp_head/
@@ -53,11 +20,6 @@ function esseo_main_meta_tags() {
 
     $default_description = isset($options['esseo_default_description']) ? esc_attr($options['esseo_default_description']) : '';
     $share_img           = isset($options['esseo_share_img']) ? esc_attr($options['esseo_share_img']) : '';
-
-    if ( function_exists( 'pll_the_languages' ) ) {
-        $default_description = esc_attr(pll__($options['esseo_default_description']));
-        $share_img           = esc_attr(pll__($options['esseo_share_img']));
-    }
 
     $description      = '';
     $og_title         = '';

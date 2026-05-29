@@ -1,15 +1,15 @@
 # Essential SEO
 
-A simple SEO WordPress plugin that provides just the essentials. Works well with Polylang for multi-language sites.
+A simple SEO WordPress plugin that provides just the essentials.
 
 ## Features
 
 - Custom meta description per post and page (falls back to excerpt, then to site default)
 - Category, tag and custom taxonomy descriptions used as meta description when set
+- Noindex option per post and page — excluded from the WordPress sitemap automatically
 - Open Graph meta tags
 - Configurable title separator
 - Free-form header scripts field (GA4, GTM, etc.) with automatic preconnect hints and GTM noscript fallback
-- Polylang integration for translatable default settings
 
 ## Requirements
 

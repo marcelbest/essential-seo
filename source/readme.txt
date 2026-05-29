@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 1.1.9
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,11 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 6. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png — The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
 
 == Changelog ==
+
+= 1.2.0 =
+
+* Added noindex option to the SEO meta box — posts and pages can now be marked as noindex directly in the editor; excluded from the WordPress sitemap automatically
+* Added German translations (de_DE, de_CH) for the noindex field
 
 = 1.1.9 =
 

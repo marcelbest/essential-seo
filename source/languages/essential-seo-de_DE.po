@@ -191,6 +191,10 @@ msgid "Default share image"
 msgstr "Standard Teilen-Bild"
 
 #: includes/meta_boxes.php
+msgid "Do not index this post/page (noindex)"
+msgstr "Diesen Beitrag/diese Seite nicht indexieren (noindex)"
+
+#: includes/meta_boxes.php
 msgid "SEO"
 msgstr "SEO"
 

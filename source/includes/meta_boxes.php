@@ -5,7 +5,7 @@ defined( 'ABSPATH' ) || die( 'No direct script access allowed!' );
 
 // Hide our meta from the_meta() and custom fields UI
 add_filter( 'is_protected_meta', function( $protected, $meta_key ) {
-    return $meta_key === 'esseo_meta_boxes' ? true : $protected;
+    return in_array( $meta_key, array( 'esseo_meta_boxes', '_noindex' ), true ) ? true : $protected;
 }, 10, 2 );
 
 /**
@@ -47,6 +47,16 @@ function esseo_show_seo_meta_boxes() {
     }
 
     ?><input type="hidden" name="esseo_meta_box_nonce" value="<?php echo wp_create_nonce( basename( ESSEO_PLUGIN ) ); ?>"><?php
+
+    // Noindex
+    $noindex = get_post_meta( $post->ID, '_noindex', true );
+    ?><p>
+        <label>
+            <input type="hidden" name="esseo_meta_boxes[noindex]" value="0">
+            <input type="checkbox" name="esseo_meta_boxes[noindex]" value="1" <?php checked( $noindex, '1' ); ?>>
+            <?php _e( 'Do not index this post/page (noindex)', 'essential-seo' ); ?>
+        </label>
+    </p><?php
 
     // SEO description
     ?><p><?php
@@ -122,5 +132,9 @@ function esseo_save_seo_meta_boxes( $post_id ) {
     } elseif ( '' === $new && $old ) {
         delete_post_meta( $post_id, 'esseo_meta_boxes', $old );
     }
+
+    // Save noindex separately to keep the _noindex meta key consistent across theme and plugin.
+    $noindex_value = isset( $_POST['esseo_meta_boxes']['noindex'] ) && '1' === $_POST['esseo_meta_boxes']['noindex'] ? '1' : '0';
+    update_post_meta( $post_id, '_noindex', $noindex_value );
 
 }

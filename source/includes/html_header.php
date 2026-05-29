@@ -180,6 +180,42 @@ function esseo_opengraph_doctype($output) {
 
 
 /**
+ * Output <meta name="robots" content="noindex"> for posts and pages with noindex set.
+ */
+add_action( 'wp_head', 'esseo_noindex_meta_tag', 1 );
+
+function esseo_noindex_meta_tag() {
+    if ( is_singular() && '1' === get_post_meta( get_the_ID(), '_noindex', true ) ) {
+        echo '<meta name="robots" content="noindex, follow">' . "\n";
+    }
+}
+
+/**
+ * Exclude noindex posts and pages from the WordPress sitemap.
+ */
+add_filter( 'wp_sitemaps_posts_query_args', 'esseo_sitemap_exclude_noindex', 10, 2 );
+
+function esseo_sitemap_exclude_noindex( $args, $post_type ) {
+    if ( in_array( $post_type, array( 'post', 'page' ), true ) ) {
+        $excluded = get_posts( array(
+            'post_type'      => $post_type,
+            'post_status'    => 'publish',
+            'fields'         => 'ids',
+            'nopaging'       => true,
+            'meta_key'       => '_noindex',
+            'meta_value'     => '1',
+        ) );
+
+        if ( ! empty( $excluded ) ) {
+            $args['post__not_in'] = isset( $args['post__not_in'] )
+                ? array_merge( $args['post__not_in'], $excluded )
+                : $excluded;
+        }
+    }
+    return $args;
+}
+
+/**
  * Title separator
  *
  * @link https://developer.wordpress.org/reference/hooks/document_title_separator/

@@ -19,6 +19,7 @@ Thumbs.db
 
 # Ignore release artifacts (local only)
 create-release-zip.command
+releases/
 *.zip
 
 # Ignore environment and secret files

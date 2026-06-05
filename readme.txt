@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 1.2.0
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,15 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 6. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png — The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
 
 == Changelog ==
+
+= 1.2.2 =
+
+* Added a live character counter to the SEO meta description field
+* German translations now use the informal "du" form
+* Fixed double-escaping of special characters (&, quotes) in meta and Open Graph descriptions
+* Fixed admin notices not showing on the settings page
+* Description length limit is now multibyte-safe (umlauts count as one character)
+* Various code cleanup and reliability improvements under the hood
 
 = 1.2.1 =
 

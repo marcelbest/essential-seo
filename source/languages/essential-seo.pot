@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Essential SEO 1.2.1\n"
+"Project-Id-Version: Essential SEO 1.2.2\n"
 "POT-Creation-Date: 2026-06-05 00:00+0100\n"
 "PO-Revision-Date: 2026-06-05 00:00+0100\n"
 "Last-Translator: \n"

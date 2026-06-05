@@ -31,32 +31,56 @@ $esseo_UpdateChecker->getVcsApi()->enableReleaseAssets();
 add_action( 'plugins_loaded', ESSEO_SHORTNAME . '_load_textdomain' );
 
 function esseo_load_textdomain() {
-    load_plugin_textdomain( ESSEO_PLUGIN_NAME, false, dirname( ESSEO_PLUGIN_BASENAME ) . '/languages' );
+    load_plugin_textdomain( 'essential-seo', false, dirname( ESSEO_PLUGIN_BASENAME ) . '/languages' );
+}
+
+/**
+ * One-time migration: rename the misspelled option key
+ * esseo_title_seperator -> esseo_title_separator.
+ *
+ * Runs on every request but writes only once: after the legacy key has been
+ * removed the isset() check below short-circuits.
+ */
+add_action( 'plugins_loaded', 'esseo_migrate_options' );
+
+function esseo_migrate_options() {
+
+    $options = get_option( 'esseo_options' );
+
+    if ( ! is_array( $options ) || ! isset( $options['esseo_title_seperator'] ) ) {
+        return;
+    }
+
+    if ( ! isset( $options['esseo_title_separator'] ) || '' === $options['esseo_title_separator'] ) {
+        $options['esseo_title_separator'] = $options['esseo_title_seperator'];
+    }
+
+    unset( $options['esseo_title_seperator'] );
+
+    update_option( 'esseo_options', $options );
+
 }
 
 // Plugin activation
 function esseo_install() {
 
-    // Creates new database field
-    // And auto loads the settings -> 'yes'
-    add_option( 'esseo_options', '', '', true );
-
-    // Saves the state of the plugin
-    // @link https://codex.wordpress.org/Function_Reference/set_transient
-    set_transient( 'essential-seo-activation', true, 0 );
-
-    // Save default values only on fresh install, never overwrite existing settings
+    // Save default values only on a fresh install, never overwrite existing settings.
     if ( get_option( 'esseo_options' ) === false ) {
         $default = [
             ESSEO_SHORTNAME . '_checkbox_og'         => '0',
-            ESSEO_SHORTNAME . '_title_seperator'     => '|',
+            ESSEO_SHORTNAME . '_title_separator'     => '|',
             ESSEO_SHORTNAME . '_default_description' => '',
             ESSEO_SHORTNAME . '_share_img'           => '',
             ESSEO_SHORTNAME . '_header_scripts'      => '',
         ];
 
-        update_option( 'esseo_options', $default );
+        // Creates the option and auto-loads it on every request.
+        add_option( 'esseo_options', $default, '', true );
     }
+
+    // Saves the state of the plugin
+    // @link https://codex.wordpress.org/Function_Reference/set_transient
+    set_transient( 'essential-seo-activation', true, 0 );
 
 }
 
@@ -66,7 +90,6 @@ register_activation_hook( ESSEO_PLUGIN, 'esseo_install' );
 function esseo_remove() {
 
     delete_transient( 'essential-seo-activation' );
-    delete_transient( 'essential-seo-translation-possible' );
 
 }
 
@@ -120,8 +143,6 @@ function esseo_add_admin_menu() {
 add_action( 'init', 'esseo_check_roles_after_everything_is_loaded' );
 
 function esseo_check_roles_after_everything_is_loaded() {
-
-    $current_user = wp_get_current_user();
 
     if ( current_user_can( 'edit_posts' ) ) {
 
@@ -322,7 +343,7 @@ function esseo_options_page_fields() {
     // Header section
     $options[] = array(
         'section' => 'header_section',
-        'id'      => ESSEO_SHORTNAME . '_title_seperator',
+        'id'      => ESSEO_SHORTNAME . '_title_separator',
         'title'   => __( 'Title separator', 'essential-seo' ),
         'desc'    => __( 'Default & recommended: |', 'essential-seo' ),
         'type'    => 'select',
@@ -335,7 +356,7 @@ function esseo_options_page_fields() {
         'section'     => 'header_section',
         'id'          => ESSEO_SHORTNAME . '_default_description',
         'title'       => __( 'Default description', 'essential-seo' ),
-        'desc'        => __( "Your default description of your website (from about 160 up to 320 chars). No HTML!<br>The description should correspont to your website's (text-)content.", 'essential-seo' ),
+        'desc'        => __( "Site-wide fallback description, used on any page that has neither its own meta description nor an excerpt. Recommended: 150–160 characters (max. 320). No HTML. It should describe your website's overall (text) content.", 'essential-seo' ),
         'type'        => 'textarea',
         'std'         => '',
         'maxlength'   => '320',
@@ -376,319 +397,133 @@ function esseo_options_page_fields() {
  */
 
 function esseo_validate_options($input) {
-     
+
     // for enhanced security, create a new empty array
     $valid_input = array();
-     
+
     // collect only the values we expect and fill the new $valid_input array i.e. whitelist our option IDs
-     
-        // get the settings sections array
-        $settings_output = esseo_get_settings();
-        
-        $options = $settings_output['esseo_page_fields'];
-         
-        // run a foreach and switch on option type
-        foreach ( $options as $option ) {
 
-            switch ( $option['type'] ) {
-                case 'text':
+    // get the settings sections array
+    $settings_output = esseo_get_settings();
 
-                    //switch validation based on the field_class!
-                    switch ( $option['field_class'] ) {
-                        //for numeric 
-                        case 'numeric':
-                            //accept the input only when numeric!
-                            $input[$option['id']]       = trim( $input[$option['id']] ); // trim whitespace
-                            $valid_input[$option['id']] = ( is_numeric( $input[$option['id']] ) ) ? $input[$option['id']] : 'Expecting a Numeric value!';
+    $options = $settings_output['esseo_page_fields'];
 
-                            // register error
-                            if ( is_numeric( $input[$option['id']] ) == false ) {
-                                add_settings_error(
-                                    $option['id'], // setting title
-                                    ESSEO_SHORTNAME . '_txt_numeric_error', // error ID
-                                    __('Expecting a Numeric value! Please fix.','essential-seo'), // error message
-                                    'error' // type of message
-                                );
-                            }
-                        break;
-                        
-                        //for multi-numeric values (separated by a comma)
-                        case 'multinumeric':
-                            //accept the input only when the numeric values are comma separated
-                            $input[$option['id']] = trim( $input[$option['id']] ); // trim whitespace
+    // run a foreach and switch on option type
+    foreach ( $options as $option ) {
 
-                            if ( $input[$option['id']] != '' ) {
-                                // /^-?\d+(?:,\s?-?\d+)*$/ matches: -1 | 1 | -12,-23 | 12,23 | -123, -234 | 123, 234  | etc.
-                                $valid_input[$option['id']] = ( preg_match( '/^-?\d+(?:,\s?-?\d+)*$/', $input[$option['id']] ) == 1 ) ? $input[$option['id']] : __( 'Expecting comma separated numeric values', 'essential-seo' );
-                            } else {
-                                $valid_input[$option['id']] = $input[$option['id']];
-                            }
+        switch ( $option['type'] ) {
+            case 'text':
 
-                            // register error
-                            if ( $input[$option['id']] != '' && preg_match( '/^-?\d+(?:,\s?-?\d+)*$/', $input[$option['id']] ) != 1 ) {
-                                add_settings_error(
-                                    $option['id'], // setting title
-                                    ESSEO_SHORTNAME . '_txt_multinumeric_error', // error ID
-                                    __('Expecting comma separated numeric values! Please fix.','essential-seo'), // error message
-                                    'error' // type of message
-                                );
-                            }
-                        break;
-                        
-                        // for no html
-                        case 'nohtml':
-                            // accept the input only after stripping out all html, extra white space etc!
-                            $input[$option['id']]       = sanitize_text_field( $input[$option['id']] ); // need to add slashes still before sending to the database
-                            $valid_input[$option['id']] = addslashes( $input[$option['id']] );
-                        break;
+                // switch validation based on the field_class!
+                switch ( $option['field_class'] ) {
+                    // for url
+                    case 'url':
+                        // accept the input only when the url has been sanitized for database usage with esc_url_raw()
+                        $input[$option['id']]       = trim( $input[$option['id']] ); // trim whitespace
+                        $valid_input[$option['id']] = esc_url_raw( $input[$option['id']] );
+                    break;
 
-                        // for nohtml_nospaces_lowercase
-                        case 'nohtml_nospaces_lowercase':
-                            // accept the input only after stripping out all html, extra white space etc!
-                            $input[$option['id']]       = sanitize_text_field( $input[$option['id']] ); // need to add slashes still before sending to the database
-                            $input[$option['id']]       = strtolower( str_replace( ' ', '', $input[$option['id']] ) ); // only lower case, no spaces
-                            $valid_input[$option['id']] = addslashes( $input[$option['id']] );
-                        break;
+                    // a "cover-all" fall-back when the field_class argument is not set
+                    default:
+                        // accept only a few inline html elements
+                        $allowed_html = array(
+                            'a'      => array( 'href' => array(), 'title' => array() ),
+                            'b'      => array(),
+                            'em'     => array(),
+                            'i'      => array(),
+                            'strong' => array(),
+                        );
 
-                        // for url
-                        case 'url':
-                            // accept the input only when the url has been sanitized for database usage with esc_url_raw()
-                            $input[$option['id']]       = trim( $input[$option['id']] ); // trim whitespace
-                            $valid_input[$option['id']] = esc_url_raw( $input[$option['id']] );
-                        break;
-                        
-                        //for email
-                        case 'email':
-                            //accept the input only after the email has been validated
-                            $input[$option['id']] = trim( $input[$option['id']] ); // trim whitespace
-                            if ( $input[$option['id']] != '' ) {
-                                $valid_input[$option['id']] = ( is_email( $input[$option['id']] ) !== false ) ? $input[$option['id']] : __( 'Invalid email! Please re-enter!', 'essential-seo' );
-                            } elseif ( $input[$option['id']] == '' ) {
-                                $valid_input[$option['id']] = __( 'This setting field cannot be empty! Please enter a valid email address.', 'essential-seo' );
-                            }
+                        $input[$option['id']]       = trim( $input[$option['id']] ); // trim whitespace
+                        $input[$option['id']]       = force_balance_tags( $input[$option['id']] ); // find incorrectly nested or missing closing tags and fix markup
+                        $input[$option['id']]       = wp_kses( $input[$option['id']], $allowed_html ); // need to add slashes still before sending to the database
+                        $valid_input[$option['id']] = addslashes( $input[$option['id']] );
+                    break;
+                }
 
-                            // register error
-                            if ( is_email( $input[$option['id']] ) == false || $input[$option['id']] == '' ) {
-                                add_settings_error(
-                                    $option['id'], // setting title
-                                    ESSEO_SHORTNAME . '_txt_email_error', // error ID
-                                    __('Please enter a valid email address.','essential-seo'), // error message
-                                    'error' // type of message
-                                );
-                            }
-                        break;
-                        
-                        // a "cover-all" fall-back when the class argument is not set
-                        default:
-                            // accept only a few inline html elements
-                            $allowed_html = array(
-                                'a'      => array( 'href' => array(), 'title' => array() ),
-                                'b'      => array(),
-                                'em'     => array(),
-                                'i'      => array(),
-                                'strong' => array(),
-                            );
-
-                            $input[$option['id']]       = trim( $input[$option['id']] ); // trim whitespace
-                            $input[$option['id']]       = force_balance_tags( $input[$option['id']] ); // find incorrectly nested or missing closing tags and fix markup
-                            $input[$option['id']]       = wp_kses( $input[$option['id']], $allowed_html ); // need to add slashes still before sending to the database
-                            $valid_input[$option['id']] = addslashes( $input[$option['id']] );
-                        break;
+                // Max length limit
+                if ( isset( $option['maxlength'] ) && ! empty( $option['maxlength'] ) ) {
+                    if ( mb_strlen( $valid_input[$option['id']] ) > $option['maxlength'] ) {
+                        $valid_input[$option['id']] = mb_substr( $valid_input[$option['id']], 0, $option['maxlength'] );
                     }
+                }
 
-                    // Max length limit
-                    if ( isset( $option['maxlength'] ) && ! empty( $option['maxlength'] ) ) {
-                        if ( strlen( $valid_input[$option['id']] ) > $option['maxlength'] ) {
-                            $valid_input[$option['id']] = substr( $valid_input[$option['id']], 0, $option['maxlength'] );
-                        }
+            break;
+
+            case 'textarea':
+                // switch validation based on the field_class!
+                switch ( $option['field_class'] ) {
+                    // for raw script/html content -- only admins (manage_options) can save this
+                    case 'scripts':
+                        $valid_input[$option['id']] = wp_unslash( $input[$option['id']] );
+                    break;
+
+                    // for no html
+                    case 'nohtml':
+                        // accept the input only after stripping out all html, extra white space etc!
+                        $input[$option['id']]       = sanitize_text_field( $input[$option['id']] ); // need to add slashes still before sending to the database
+                        $valid_input[$option['id']] = addslashes( $input[$option['id']] );
+                    break;
+
+                    // a "cover-all" fall-back when the field_class argument is not set
+                    default:
+                        // accept only limited html
+                        $allowed_html = array(
+                            'a'          => array( 'href' => array(), 'title' => array() ),
+                            'b'          => array(),
+                            'blockquote' => array( 'cite' => array() ),
+                            'br'         => array(),
+                            'dd'         => array(),
+                            'dl'         => array(),
+                            'dt'         => array(),
+                            'em'         => array(),
+                            'i'          => array(),
+                            'li'         => array(),
+                            'ol'         => array(),
+                            'p'          => array(),
+                            'q'          => array( 'cite' => array() ),
+                            'strong'     => array(),
+                            'ul'         => array(),
+                            'h1'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
+                            'h2'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
+                            'h3'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
+                            'h4'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
+                            'h5'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
+                            'h6'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
+                        );
+
+                        $input[$option['id']]       = trim( $input[$option['id']] ); // trim whitespace
+                        $input[$option['id']]       = force_balance_tags( $input[$option['id']] ); // find incorrectly nested or missing closing tags and fix markup
+                        $input[$option['id']]       = wp_kses( $input[$option['id']], $allowed_html ); // need to add slashes still before sending to the database
+                        $valid_input[$option['id']] = addslashes( $input[$option['id']] );
+                    break;
+                }
+
+                // Max length limit
+                if ( isset( $option['maxlength'] ) && ! empty( $option['maxlength'] ) ) {
+                    if ( mb_strlen( $valid_input[$option['id']] ) > $option['maxlength'] ) {
+                        $valid_input[$option['id']] = mb_substr( $valid_input[$option['id']], 0, $option['maxlength'] );
                     }
+                }
 
-                break;
-                 
-                case 'multi-text':
-                    // this will hold the text values as an array of 'key' => 'value'
-                    unset( $textarray );
+            break;
 
-                    $text_values = array();
-                    foreach ( $option['choices'] as $k => $v ) {
-                        // explode the connective
-                        $pieces = explode( '|', $v );
+            case 'select':
+                // check to see if the selected value is in our approved array of values!
+                $valid_input[$option['id']] = ( in_array( $input[$option['id']], $option['choices'] ) ? $input[$option['id']] : '' );
+            break;
 
-                        $text_values[] = $pieces[1];
-                    }
+            case 'checkbox':
+                // if it's not set, default to null!
+                if ( ! isset( $input[$option['id']] ) ) {
+                    $input[$option['id']] = null;
+                }
+                // Our checkbox value is either 0 or 1
+                $valid_input[$option['id']] = ( $input[$option['id']] == 1 ? 1 : 0 );
+            break;
 
-                    foreach ( $text_values as $v ) {
-
-                        // Check that the option isn't empty
-                        if ( ! empty( $input[$option['id'] . '|' . $v] ) ) {
-                            // If it's not null, make sure it's sanitized, add it to an array
-                            switch ( $option['class'] ) {
-                                // different sanitation actions based on the class create you own cases as you need them
-
-                                // for numeric input
-                                case 'numeric':
-                                    // accept the input only if is numeric!
-                                    $input[$option['id'] . '|' . $v] = trim( $input[$option['id'] . '|' . $v] ); // trim whitespace
-                                    $input[$option['id'] . '|' . $v] = ( is_numeric( $input[$option['id'] . '|' . $v] ) ) ? $input[$option['id'] . '|' . $v] : '';
-                                break;
-
-                                // a "cover-all" fall-back when the class argument is not set
-                                default:
-                                    // strip all html tags and white-space.
-                                    $input[$option['id'] . '|' . $v] = sanitize_text_field( $input[$option['id'] . '|' . $v] ); // need to add slashes still before sending to the database
-                                    $input[$option['id'] . '|' . $v] = addslashes( $input[$option['id'] . '|' . $v] );
-                                break;
-                            }
-                            // pass the sanitized user input to our $textarray array
-                            $textarray[$v] = $input[$option['id'] . '|' . $v];
-
-                        } else {
-                            $textarray[$v] = '';
-                        }
-                    }
-                    // pass the non-empty $textarray to our $valid_input array
-                    if ( ! empty( $textarray ) ) {
-                        $valid_input[$option['id']] = $textarray;
-                    }
-
-                    // Max length limit
-                    if ( isset( $option['maxlength'] ) && ! empty( $option['maxlength'] ) ) {
-                        if ( strlen( $valid_input[$option['id']] ) > $option['maxlength'] ) {
-                            $valid_input[$option['id']] = substr($valid_input[$option['id']], 0, $option['maxlength']);
-                        }
-                    }
-
-                break;
-                 
-                case 'textarea':
-                    //switch validation based on the class!
-                    switch ( $option['field_class'] ) {
-                        // for raw script/html content — only admins (manage_options) can save this
-                        case 'scripts':
-                            $valid_input[$option['id']] = wp_unslash( $input[$option['id']] );
-                        break;
-
-                        // for only inline html
-                        case 'inlinehtml':
-                            // accept only inline html
-                            $input[$option['id']]       = trim( $input[$option['id']] ); // trim whitespace
-                            $input[$option['id']]       = force_balance_tags( $input[$option['id']] ); // find incorrectly nested or missing closing tags and fix markup
-                            $input[$option['id']]       = addslashes( $input[$option['id']] ); // wp_filter_kses expects content to be escaped!
-                            $valid_input[$option['id']] = wp_filter_kses( $input[$option['id']] ); // calls stripslashes then addslashes
-                        break;
-
-                        // for no html
-                        case 'nohtml':
-                            // accept the input only after stripping out all html, extra white space etc!
-                            $input[$option['id']]       = sanitize_text_field( $input[$option['id']] ); // need to add slashes still before sending to the database
-                            $valid_input[$option['id']] = addslashes( $input[$option['id']] );
-                        break;
-                         
-                        // for allowlinebreaks
-                        case 'allowlinebreaks':
-                            // accept the input only after stripping out all html, extra white space etc!
-                            $input[$option['id']]       = wp_strip_all_tags( $input[$option['id']] ); // need to add slashes still before sending to the database
-                            $valid_input[$option['id']] = addslashes( $input[$option['id']] );
-                        break;
-
-                        // a "cover-all" fall-back when the class argument is not set
-                        default:
-                            // accept only limited html
-                            $allowed_html = array(
-                                'a'          => array( 'href' => array(), 'title' => array() ),
-                                'b'          => array(),
-                                'blockquote' => array( 'cite' => array() ),
-                                'br'         => array(),
-                                'dd'         => array(),
-                                'dl'         => array(),
-                                'dt'         => array(),
-                                'em'         => array(),
-                                'i'          => array(),
-                                'li'         => array(),
-                                'ol'         => array(),
-                                'p'          => array(),
-                                'q'          => array( 'cite' => array() ),
-                                'strong'     => array(),
-                                'ul'         => array(),
-                                'h1'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
-                                'h2'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
-                                'h3'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
-                                'h4'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
-                                'h5'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
-                                'h6'         => array( 'align' => array(), 'class' => array(), 'id' => array(), 'style' => array() ),
-                            );
-
-                            $input[$option['id']]       = trim( $input[$option['id']] ); // trim whitespace
-                            $input[$option['id']]       = force_balance_tags( $input[$option['id']] ); // find incorrectly nested or missing closing tags and fix markup
-                            $input[$option['id']]       = wp_kses( $input[$option['id']], $allowed_html ); // need to add slashes still before sending to the database
-                            $valid_input[$option['id']] = addslashes( $input[$option['id']] );
-                        break;
-                    }
-
-                    // Max length limit
-                    if ( isset( $option['maxlength'] ) && ! empty( $option['maxlength'] ) ) {
-                        if ( strlen( $valid_input[$option['id']] ) > $option['maxlength'] ) {
-                            $valid_input[$option['id']] = substr( $valid_input[$option['id']], 0, $option['maxlength'] );
-                        }
-                    }
-
-                break;
-                 
-                case 'select':
-                    // check to see if the selected value is in our approved array of values!
-                    $valid_input[$option['id']] = ( in_array( $input[$option['id']], $option['choices'] ) ? $input[$option['id']] : '' );
-                break;
-
-                case 'select2':
-                    // process $select_values
-                    $select_values = array();
-                    foreach ( $option['choices'] as $k => $v ) {
-                        // explode the connective
-                        $pieces = explode( '|', $v );
-
-                        $select_values[] = $pieces[1];
-                    }
-                    // check to see if selected value is in our approved array of values!
-                    $valid_input[$option['id']] = ( in_array( $input[$option['id']], $select_values ) ? $input[$option['id']] : '' );
-                break;
-
-                case 'checkbox':
-                    // if it's not set, default to null!
-                    if ( ! isset( $input[$option['id']] ) ) {
-                        $input[$option['id']] = null;
-                    }
-                    // Our checkbox value is either 0 or 1
-                    $valid_input[$option['id']] = ( $input[$option['id']] == 1 ? 1 : 0 );
-                break;
-                 
-                case 'multi-checkbox':
-                    unset( $checkboxarray );
-                    $check_values = array();
-                    foreach ( $option['choices'] as $k => $v ) {
-                        // explode the connective
-                        $pieces = explode( '|', $v );
-
-                        $check_values[] = $pieces[1];
-                    }
-
-                    foreach ( $check_values as $v ) {
-
-                        // Check that the option isn't null
-                        if ( ! empty( $input[$option['id'] . '|' . $v] ) ) {
-                            // If it's not null, make sure it's true, add it to an array
-                            $checkboxarray[$v] = 'true';
-                        } else {
-                            $checkboxarray[$v] = 'false';
-                        }
-                    }
-                    // Take all the items that were checked, and set them as the main option
-                    if ( ! empty( $checkboxarray ) ) {
-                        $valid_input[$option['id']] = $checkboxarray;
-                    }
-                break;
-                 
-            }
         }
+    }
 
     // return validated input
     return $valid_input;
@@ -727,8 +562,7 @@ function esseo_form_field_fn( $args = array() ) {
 
     // additional field class. output only if the field_class is defined in the create_setting arguments
     $field_class = ( $field_class != '' ) ? ' ' . $field_class : '';
-     
-     
+
     // switch html display based on the setting type.
     switch ( $type ) {
         case 'text':
@@ -739,26 +573,6 @@ function esseo_form_field_fn( $args = array() ) {
             echo '>';
             echo ( $desc != '' ) ? "<br><br><span class='description'>$desc</span>" : '';
         break;
-         
-        case 'multi-text':
-            foreach ( $choices as $item ) {
-                $item = explode( '|', $item ); // cat_name|cat_slug
-                $item[0] = esc_html__( $item[0], 'essential-seo' );
-                if ( ! empty( $options[$id] ) ) {
-                    foreach ( $options[$id] as $option_key => $option_val ) {
-                        if ( $item[1] == $option_key ) {
-                            $value = $option_val;
-                        }
-                    }
-                } else {
-                    $value = '';
-                }
-                echo "<span>$item[0]:</span> <input class='$field_class' type='text' id='$id|$item[1]' name='" . $esseo_option_name . "[$id|$item[1]]' value='$value'";
-                echo ( $maxlength != '' ) ? " maxlength='{$maxlength}'" : '';
-                echo '><br>';
-            }
-            echo ( $desc != '' ) ? "<br><span class='description'>$desc</span>" : '';
-        break;
 
         case 'textarea':
             $options[$id] = stripslashes( $options[$id] );
@@ -768,7 +582,7 @@ function esseo_form_field_fn( $args = array() ) {
             echo ">$options[$id]</textarea>";
             echo ( $desc != '' ) ? "<br><br><span class='description'>$desc</span>" : '';
         break;
-         
+
         case 'select':
             echo "<select id='$id' class='select$field_class' name='" . $esseo_option_name . "[$id]'>";
             foreach ( $choices as $item ) {
@@ -781,37 +595,8 @@ function esseo_form_field_fn( $args = array() ) {
             echo ( $desc != '' ) ? "<br><br><span class='description'>$desc</span>" : '';
         break;
 
-        case 'select2':
-            echo "<select id='$id' class='select$field_class' name='" . $esseo_option_name . "[$id]'>";
-            foreach ( $choices as $item ) {
-                $item     = explode( '|', $item );
-                $item[0]  = esc_html( $item[0] );
-                $selected = ( $options[$id] == $item[1] ) ? 'selected="selected"' : '';
-                echo "<option value='$item[1]' $selected>$item[0]</option>";
-            }
-            echo '</select>';
-            echo ( $desc != '' ) ? "<br><br><span class='description'>$desc</span>" : '';
-        break;
-
         case 'checkbox':
             echo "<input class='checkbox$field_class' type='checkbox' id='$id' name='" . $esseo_option_name . "[$id]' value='1' " . checked( $options[$id], 1, false ) . '>';
-            echo ( $desc != '' ) ? "<br><br><span class='description'>$desc</span>" : '';
-        break;
-
-        case 'multi-checkbox':
-            foreach ( $choices as $item ) {
-                $item    = explode( '|', $item );
-                $item[0] = esc_html( $item[0] );
-                $checked = '';
-
-                if ( isset( $options[$id][$item[1]] ) ) {
-                    if ( $options[$id][$item[1]] == 'true' ) {
-                        $checked = 'checked="checked"';
-                    }
-                }
-
-                echo "<input class='checkbox$field_class' type='checkbox' id='$id|$item[1]' name='" . $esseo_option_name . "[$id|$item[1]]' value='1' $checked> $item[0] <br />";
-            }
             echo ( $desc != '' ) ? "<br><br><span class='description'>$desc</span>" : '';
         break;
     }
@@ -889,33 +674,29 @@ function esseo_show_msg($message, $msgclass = 'info') {
  * @return calls esseo_show_msg()
  */
 function esseo_admin_msgs() {
-    
-    // check for our settings page - need this in conditional further down
-    $esseo_settings_pg = isset($_GET['page']) ? strpos($_GET['page'], ESSEO_PLUGIN_NAME) : '';
+
+    // Are we on our settings page? strpos() can legitimately return 0 here
+    // (page === plugin name), so compare against false explicitly instead of using empty().
+    $on_settings_page = isset( $_GET['page'] ) && false !== strpos( $_GET['page'], ESSEO_PLUGIN_NAME );
+
     // collect setting errors/notices: //http://codex.wordpress.org/Function_Reference/get_settings_errors
-    $set_errors = get_settings_errors(); 
-     
-    //display admin message only for the admin to see, only on our settings page and only when setting errors/notices are returned! 
-    if ( current_user_can( 'manage_options' ) && false !== $esseo_settings_pg && ! empty( $set_errors ) ) {
+    $set_errors = get_settings_errors();
 
-        // Show only on settings page
-        if ( ! empty( $esseo_settings_pg ) ) {
+    //display admin message only for the admin to see, only on our settings page and only when setting errors/notices are returned!
+    if ( current_user_can( 'manage_options' ) && $on_settings_page && ! empty( $set_errors ) ) {
 
-            // have our settings successfully been updated?
-            if ( $set_errors[0]['code'] == 'settings_updated' && isset( $_GET['settings-updated'] ) ) {
-                
-                esseo_show_msg("<p>" . $set_errors[0]['message'] . "</p>", 'updated');
+        // have our settings successfully been updated?
+        if ( $set_errors[0]['code'] == 'settings_updated' && isset( $_GET['settings-updated'] ) ) {
 
-            // have errors been found?
+            esseo_show_msg( "<p>" . $set_errors[0]['message'] . "</p>", 'updated' );
 
-            } else {
-                // there may be more than one so run a foreach loop.
-                foreach ( $set_errors as $set_error ) {
-                    // set the title attribute to match the error "setting title" - need this in js file
-                    esseo_show_msg("<p class='setting-error-message' data-title='" . $set_error['setting'] . "'>" . $set_error['message'] . "</p>", 'error');
-                }
+        // have errors been found?
+        } else {
+            // there may be more than one so run a foreach loop.
+            foreach ( $set_errors as $set_error ) {
+                // set the title attribute to match the error "setting title" - need this in js file
+                esseo_show_msg( "<p class='setting-error-message' data-title='" . $set_error['setting'] . "'>" . $set_error['message'] . "</p>", 'error' );
             }
-
         }
 
     }
@@ -936,5 +717,19 @@ function esseo_options_page_style( $hook ) {
 
     // https://codex.wordpress.org/Function_Reference/plugin_dir_url
     wp_enqueue_style( 'esseo-style', plugin_dir_url( ESSEO_PLUGIN ) . 'css/style.css', array(), ESSEO_VERSION );
+    wp_enqueue_script( 'esseo-script', plugin_dir_url( ESSEO_PLUGIN ) . 'js/script.js', array( 'jquery' ), ESSEO_VERSION, true );
+}
+
+// Editor assets — only the script is needed (for the meta description character counter).
+// The settings stylesheet is intentionally NOT loaded here: it targets global admin
+// classes (.wrap, .form-table, .notice) that would otherwise affect the post editor.
+add_action( 'admin_enqueue_scripts', 'esseo_editor_assets' );
+
+function esseo_editor_assets( $hook ) {
+
+    if ( 'post.php' !== $hook && 'post-new.php' !== $hook ) {
+        return;
+    }
+
     wp_enqueue_script( 'esseo-script', plugin_dir_url( ESSEO_PLUGIN ) . 'js/script.js', array( 'jquery' ), ESSEO_VERSION, true );
 }

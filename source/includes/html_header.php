@@ -16,10 +16,10 @@ function esseo_main_meta_tags() {
 
     $default_title = esc_attr(get_bloginfo('name'));
 
-    $default_title_seperator = (!empty($options['esseo_title_seperator'])) ? $options['esseo_title_seperator'] : '|';
+    $default_title_separator = (!empty($options['esseo_title_separator'])) ? $options['esseo_title_separator'] : '|';
 
-    $default_description = isset($options['esseo_default_description']) ? esc_attr($options['esseo_default_description']) : '';
-    $share_img           = isset($options['esseo_share_img']) ? esc_attr($options['esseo_share_img']) : '';
+    $default_description = isset($options['esseo_default_description']) ? $options['esseo_default_description'] : '';
+    $share_img           = isset($options['esseo_share_img']) ? $options['esseo_share_img'] : '';
 
     $description      = '';
     $og_title         = '';
@@ -30,56 +30,52 @@ function esseo_main_meta_tags() {
 
     if ( is_single() || ( is_page() && ! is_front_page() ) ) {
 
-        while (have_posts()) {
+        // Use the queried object directly instead of running the main loop in
+        // wp_head, which would fire the_post and move the global $post pointer.
+        $post_id          = get_queried_object_id();
+        $esseo_meta_boxes = get_post_meta($post_id, 'esseo_meta_boxes', true);
 
-            the_post();
+        if ( ! empty( $esseo_meta_boxes['description'] ) ) {
+            $description = $esseo_meta_boxes['description'];
+        } elseif ( has_excerpt($post_id) ) {
+            $description = wp_strip_all_tags(get_the_excerpt($post_id));
+        } else {
+            $description = $default_description;
+        }
 
-            $post_id         = get_the_ID();
-            $esseo_meta_boxes = get_post_meta($post_id, 'esseo_meta_boxes', true);
+        $og_title = '<meta property="og:title" content="' . esc_attr(get_the_title($post_id)) . ' ' . $default_title_separator . ' ' . $default_title . '">';
+        $og_type  = '<meta property="og:type" content="article">';
+        $og_url   = '<meta property="og:url" content="' . esc_url(get_permalink($post_id)) . '">';
 
-            if ( ! empty( $esseo_meta_boxes['description'] ) ) {
-                $description = esc_html(esc_attr($esseo_meta_boxes['description']));
-            } elseif (has_excerpt()) {
-                $description = esc_html(wp_strip_all_tags(get_the_excerpt()));
-            } else {
-                $description = esc_html($default_description);
+        if ( has_post_thumbnail($post_id) ) {
+            $thumbnail_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' );
+            if ( $thumbnail_img ) {
+                $share_img        = $thumbnail_img[0];
+                $share_img_width  = $thumbnail_img[1];
+                $share_img_height = $thumbnail_img[2];
             }
-
-            $og_title = '<meta property="og:title" content="' . esc_attr(get_the_title()) . ' ' . $default_title_seperator . ' ' . $default_title . '">';
-            $og_type  = '<meta property="og:type" content="article">';
-            $og_url   = '<meta property="og:url" content="' . esc_url(get_permalink()) . '">';
-
-            if ( has_post_thumbnail() ) {
-                $thumbnail_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' );
-                if ( $thumbnail_img ) {
-                    $share_img        = $thumbnail_img[0];
-                    $share_img_width  = $thumbnail_img[1];
-                    $share_img_height = $thumbnail_img[2];
-                }
-            }
-
         }
 
     } else {
 
-        $description = esc_html($default_description);
+        $description = $default_description;
         $og_title    = '<meta property="og:title" content="' . $default_title . '">';
 
         if ( is_category() || is_tag() || is_tax() ) {
             $term_description = term_description();
             if ( ! empty( $term_description ) ) {
-                $description = esc_html(wp_strip_all_tags($term_description));
+                $description = wp_strip_all_tags($term_description);
             }
         }
 
         $categories = get_the_category();
         if ( ! empty( $categories ) && ! is_front_page() ) {
-            $og_title = '<meta property="og:title" content="' . esc_attr($categories[0]->name) . ' ' . $default_title_seperator . ' ' . $default_title . '">';
+            $og_title = '<meta property="og:title" content="' . esc_attr($categories[0]->name) . ' ' . $default_title_separator . ' ' . $default_title . '">';
         }
 
         $tag = single_tag_title('', false);
         if ( ! empty( $tag ) ) {
-            $og_title = '<meta property="og:title" content="' . esc_attr($tag) . ' ' . $default_title_seperator . ' ' . $default_title . '">';
+            $og_title = '<meta property="og:title" content="' . esc_attr($tag) . ' ' . $default_title_separator . ' ' . $default_title . '">';
         }
 
         $og_type = '<meta property="og:type" content="website">';
@@ -89,7 +85,7 @@ function esseo_main_meta_tags() {
 
     // Description
     if ( ! empty( $description ) ) {
-        ?><meta name="description" content="<?php echo $description; ?>"><?php
+        ?><meta name="description" content="<?php echo esc_attr( $description ); ?>"><?php
     }
 
     // Open Graph
@@ -103,11 +99,11 @@ function esseo_main_meta_tags() {
         ?><meta property="og:site_name" content="<?php echo $default_title; ?>"><?php
 
         if ( ! empty( $description ) ) {
-            ?><meta property="og:description" content="<?php echo $description; ?>"><?php
+            ?><meta property="og:description" content="<?php echo esc_attr( $description ); ?>"><?php
         }
 
         if ( ! empty( $share_img ) ) {
-            ?><meta property="og:image" content="<?php echo esc_attr( $share_img ); ?>"><?php
+            ?><meta property="og:image" content="<?php echo esc_url( $share_img ); ?>"><?php
             if ( ! empty( $share_img_width ) ) {
                 ?><meta property="og:image:width" content="<?php echo (int) $share_img_width; ?>"><?php
                 ?><meta property="og:image:height" content="<?php echo (int) $share_img_height; ?>"><?php
@@ -188,8 +184,8 @@ function esseo_document_title_separator($sep) {
 
     $options = get_option('esseo_options');
 
-    if ( ! empty( $options['esseo_title_seperator'] ) ) {
-        $sep = $options['esseo_title_seperator'];
+    if ( ! empty( $options['esseo_title_separator'] ) ) {
+        $sep = $options['esseo_title_separator'];
     }
 
     return $sep;
@@ -220,6 +216,8 @@ function esseo_add_header_scripts() {
         echo '<link rel="preconnect" href="https://www.googletagmanager.com">' . "\n";
     }
 
+    // Intentional raw output: this is an admin-only field (only users with the
+    // manage_options capability can save it) meant to hold complete tracking snippets.
     echo $scripts . "\n";
 
 }

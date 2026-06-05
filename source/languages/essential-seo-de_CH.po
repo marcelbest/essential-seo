@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Project-Id-Version: Essential SEO 1.1.0\n"
-"POT-Creation-Date: 2026-05-11 00:00+0100\n"
-"PO-Revision-Date: 2026-05-11 00:00+0100\n"
+"Project-Id-Version: Essential SEO 1.2.1\n"
+"POT-Creation-Date: 2026-06-05 00:00+0100\n"
+"PO-Revision-Date: 2026-06-05 00:00+0100\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,8 +26,8 @@ msgid ""
 "Thank you for using this plugin.<br><strong>It requires some important "
 "settings.</strong>"
 msgstr ""
-"Danke für die Benutzung dieses Plugins.<br><strong>Es bedarf einiger "
-"wichtiger Einstellungen.</strong>"
+"Danke, dass du dieses Plugin nutzt.<br><strong>Es sind noch einige wichtige "
+"Einstellungen nötig.</strong>"
 
 #: includes/functions.php
 msgid "To the settings page"
@@ -44,27 +44,11 @@ msgid ""
 "of the work on each post and page. They have now a custom fields to let you "
 "write a description for search engines."
 msgstr ""
-"Um dieses Plugin Ihre Website verbessern zu lassen, gehen Sie bitte "
-"sorgfältig jede Einstellung durch. Einmal eingestellt, können Sie es so "
-"belassen und den Rest der Arbeit auf jedem Beitrag bzw. Seite erledigen. Sie "
-"haben jetzt benutzerdefinierte Felder zur Verfügung wo sie eine Beschreibung "
-"für die Suchmaschinen schreiben können."
-
-#: includes/functions.php
-msgid "Great"
-msgstr "Super"
-
-#: includes/functions.php
-msgid ""
-"You have Polylang installed. You can translate your default settings for all "
-"languages here"
-msgstr ""
-"Sie haben Polylang installiert. Sie können die Standardeinstellungen für "
-"alle Sprachen hier übersetzen"
-
-#: includes/functions.php
-msgid "Go to Polylang settings"
-msgstr "Zu den Polylang Einstellungen"
+"Damit dieses Plugin deine Website verbessern kann, geh bitte sorgfältig jede "
+"Einstellung hier durch. Einmal eingestellt, kannst du es so belassen und den "
+"Rest der Arbeit bei jedem Beitrag und jeder Seite erledigen. Dort hast du "
+"jetzt ein eigenes Feld, in dem du eine Beschreibung für Suchmaschinen "
+"schreiben kannst."
 
 #: includes/functions.php
 msgid "The Open Graph protocol"
@@ -96,15 +80,15 @@ msgid ""
 "Here you can set the defaults for your website's description, keywords, "
 "share image and the title."
 msgstr ""
-"Hier können Sie die Standardwerte für Beschreibung, Teilen-Bild und Titel "
-"Ihrer Website festlegen."
+"Hier kannst du die Standardwerte für Beschreibung, Teilen-Bild und Titel "
+"deiner Website festlegen."
 
 #: includes/functions.php
 msgid ""
 "Paste your complete tracking snippet here (GA4, GTM, etc.). Preconnect hints "
 "and the GTM noscript fallback are added automatically."
 msgstr ""
-"Fügen Sie hier Ihr vollständiges Tracking-Snippet ein (GA4, GTM, etc.). "
+"Füge hier dein vollständiges Tracking-Snippet ein (GA4, GTM usw.). "
 "Preconnect-Hinweise und der GTM-Noscript-Fallback werden automatisch ergänzt."
 
 #: includes/functions.php
@@ -119,18 +103,20 @@ msgstr "Titel Trennzeichen"
 msgid "Default & recommended: |"
 msgstr "Standard- & empfohlen: |"
 
-#: includes/functions.php includes/html_header.php
+#: includes/functions.php
 msgid "Default description"
 msgstr "Standardbeschreibung"
 
 #: includes/functions.php
 msgid ""
-"Your default description of your website (from about 160 up to 320 chars). "
-"No HTML!<br>The description should correspont to your website's "
-"(text-)content."
+"Site-wide fallback description, used on any page that has neither its own "
+"meta description nor an excerpt. Recommended: 150–160 characters (max. 320). "
+"No HTML. It should describe your website's overall (text) content."
 msgstr ""
-"Ihre Standardbeschreibung der Website (ca. 160 bis 320 Zeichen). Kein HTML!"
-"<br>Die Beschreibung sollte dem (Text-)Inhalt Ihrer Website entsprechen."
+"Seitenweite Ersatzbeschreibung, die auf jeder Seite verwendet wird, die "
+"weder eine eigene Meta-Beschreibung noch einen Auszug hat. Empfohlen: 150–"
+"160 Zeichen (max. 320). Kein HTML. Sie sollte den gesamten (Text-)Inhalt "
+"deiner Website beschreiben."
 
 #: includes/functions.php
 msgid "Share image path"
@@ -142,9 +128,9 @@ msgid ""
 "domain/img-path<br>If a page or post has a feature image it will be used "
 "instead."
 msgstr ""
-"Der Standard-Bildpfad für das Teilen-Bild wird hier benötigt. http://ihre."
-"domain/bild-pfad<br>Wenn ein Beitrag oder eine Seite ein Beitragsbild hat, "
-"wird dieses stattdessen verwendet."
+"Hier wird der Standard-Bildpfad für das Teilen-Bild benötigt, bitte lege "
+"einen fest. http://deine.domain/bild-pfad<br>Wenn ein Beitrag oder eine "
+"Seite ein Beitragsbild hat, wird dieses stattdessen verwendet."
 
 #: includes/functions.php
 msgid "Header Scripts"
@@ -156,39 +142,9 @@ msgid ""
 "automatically adds preconnect hints for known Google domains and a GTM "
 "noscript fallback in the footer."
 msgstr ""
-"Fügen Sie hier Ihr vollständiges Tracking-Snippet ein (GA4, GTM, etc.). Das "
+"Füge hier dein vollständiges Tracking-Snippet ein (GA4, GTM usw.). Das "
 "Plugin ergänzt automatisch Preconnect-Hinweise für bekannte Google-Domains "
 "und einen GTM-Noscript-Fallback im Footer."
-
-#: includes/functions.php
-msgid "Expecting a Numeric value! Please fix."
-msgstr "Numerischer Wert erwartet. Bitte erneut eingeben."
-
-#: includes/functions.php
-msgid "Expecting comma separated numeric values"
-msgstr "Komma getrennte numerische Werte erwartet"
-
-#: includes/functions.php
-msgid "Expecting comma separated numeric values! Please fix."
-msgstr "Komma getrennte numerische Werte erwartet. Bitte erneut eingeben."
-
-#: includes/functions.php
-msgid "Invalid email! Please re-enter!"
-msgstr "Ungültige E-Mail. Bitte erneut eingeben!"
-
-#: includes/functions.php
-msgid "This setting field cannot be empty! Please enter a valid email address."
-msgstr ""
-"Dieses Einstellungsfeld darf nicht leer sein! Bitte geben Sie eine gültige "
-"E-Mail-Adresse ein."
-
-#: includes/functions.php
-msgid "Please enter a valid email address."
-msgstr "Bitte geben Sie eine gültige E-Mail-Adresse ein."
-
-#: includes/html_header.php
-msgid "Default share image"
-msgstr "Standard Teilen-Bild"
 
 #: includes/meta_boxes.php
 msgid "Do not index this post/page (noindex)"
@@ -203,7 +159,7 @@ msgid ""
 "Meta description (recommended: 150–160 chars, max. 320) — leave empty to "
 "use the excerpt or the site default"
 msgstr ""
-"Meta-Beschreibung (empfohlen: 150–160 Zeichen, max. 320) — leer lassen um "
+"Meta-Beschreibung (empfohlen: 150–160 Zeichen, max. 320) — leer lassen, um "
 "den Auszug oder die Website-Standardbeschreibung zu verwenden"
 
 #: includes/meta_boxes.php
@@ -211,7 +167,7 @@ msgid ""
 "<strong>SEO:</strong> Your meta-description had more than 320 characters. It "
 "was shortened for you."
 msgstr ""
-"<strong>SEO:</strong> Ihre Meta-Beschreibung hatte mehr als 320 Zeichen. "
+"<strong>SEO:</strong> Deine Meta-Beschreibung hatte mehr als 320 Zeichen. "
 "Sie wurde gekürzt."
 
 #. Plugin Name of the plugin/theme
@@ -219,12 +175,8 @@ msgid "Essential SEO"
 msgstr "Essential SEO"
 
 #. Description of the plugin/theme
-msgid ""
-"A simple SEO WordPress plugin, which provides just the essentials. It works "
-"well together with Polylang."
-msgstr ""
-"Ein einfaches SEO WordPress Plugin, welches nur die wichtigen Dinge zur "
-"Verfügung stellt. Es funktioniert auch zusammen mit Polylang."
+msgid "A simple SEO WordPress plugin, which provides just the essentials."
+msgstr "Ein einfaches SEO-WordPress-Plugin, das nur die wichtigsten Funktionen bietet."
 
 #. Author of the plugin/theme
 msgid "Marcel Best"

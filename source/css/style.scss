@@ -2,6 +2,8 @@
 $border-color: rgba(0, 0, 0, .15);
 $border-radius: 6px;
 $spacing: 20px;
+$error-color: #d63638; // WordPress admin error red
+$field-bg: #fff;
 
 // Admin notices
 .notice,
@@ -32,7 +34,7 @@ div.error {
         border: 1px solid $border-color;
         margin-bottom: $spacing;
         padding: 0 10px;
-        background-color: white;
+        background-color: $field-bg;
         border-radius: $border-radius;
     }
 
@@ -46,4 +48,13 @@ textarea.textarea {
 
 .select option {
     padding-right: $spacing;
+}
+
+// Validation error highlighting (toggled via script.js)
+label.error {
+    color: $error-color;
+}
+
+input.esseo-field-error {
+    border-color: $error-color;
 }

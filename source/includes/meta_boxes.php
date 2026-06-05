@@ -61,15 +61,17 @@ function esseo_show_seo_meta_boxes() {
     // SEO description
     ?><p><?php
 
-        ?><label for="esseo_meta_boxes[description]"><?php _e( 'Meta description (recommended: 150–160 chars, max. 320) — leave empty to use the excerpt or the site default', 'essential-seo' ); ?></label><?php
+        ?><label for="esseo_meta_description"><?php _e( 'Meta description (recommended: 150–160 chars, max. 320) — leave empty to use the excerpt or the site default', 'essential-seo' ); ?></label><?php
         ?><br><?php
-        ?><textarea name="esseo_meta_boxes[description]" id="esseo_meta_boxes[description]" rows="2" cols="30" style="width:100%;" maxlength="320"><?php
+        ?><textarea name="esseo_meta_boxes[description]" id="esseo_meta_description" class="esseo-meta-description" rows="2" cols="30" style="width:100%;" maxlength="320"><?php
 
         if ( isset( $meta['description'] ) && ! empty( $meta['description'] ) ) {
             echo esc_textarea( $meta['description'] );
         }
 
         ?></textarea><?php
+        ?><br><?php
+        ?><span class="esseo-charcount description" aria-live="polite"></span><?php
 
     ?></p><?php
 
@@ -81,26 +83,35 @@ function esseo_save_seo_meta_boxes( $post_id ) {
     $seo_meta_box_nonce = isset( $_POST['esseo_meta_box_nonce'] ) ? $_POST['esseo_meta_box_nonce'] : '';
 
     if ( ! wp_verify_nonce( $seo_meta_box_nonce, basename( ESSEO_PLUGIN ) ) ) {
-        return $post_id;
+        return;
     }
 
     // Check autosave
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-        return $post_id;
+        return;
     }
 
-    // Check permissions
-    if ( 'page' === $_POST['post_type'] ) {
+    // Bail if our meta box was not part of this request
+    if ( ! isset( $_POST['esseo_meta_boxes'] ) ) {
+        return;
+    }
+
+    // Check permissions for both pages and posts
+    $post_type = isset( $_POST['post_type'] ) ? $_POST['post_type'] : '';
+
+    if ( 'page' === $post_type ) {
         if ( ! current_user_can( 'edit_page', $post_id ) ) {
-            return $post_id;
-        } elseif ( ! current_user_can( 'edit_post', $post_id ) ) {
-            return $post_id;
+            return;
+        }
+    } else {
+        if ( ! current_user_can( 'edit_post', $post_id ) ) {
+            return;
         }
     }
 
-    $old     = get_post_meta( $post_id, 'esseo_meta_boxes', true );
-    $new     = $_POST['esseo_meta_boxes'];
     $user_id = get_current_user_id();
+    $old     = get_post_meta( $post_id, 'esseo_meta_boxes', true );
+    $posted  = $_POST['esseo_meta_boxes'];
 
     /**
      * Sanitize textarea content
@@ -109,32 +120,25 @@ function esseo_save_seo_meta_boxes( $post_id ) {
      * @link https://codex.wordpress.org/Function_Reference/sanitize_meta
      * @link https://developer.wordpress.org/plugins/security/data-validation/
      */
+    $description = isset( $posted['description'] ) ? sanitize_textarea_field( $posted['description'] ) : '';
+    $description = sanitize_text_field( trim( $description ) );
 
-    $seo_meta_boxes_description = sanitize_textarea_field( $new['description'] );
+    // Max of 320 characters (multibyte-safe, so umlauts count as one char like the textarea maxlength)
+    if ( mb_strlen( $description ) > 320 ) {
+        $description = mb_substr( $description, 0, 320 );
+        set_transient( "seo_meta_box_error_msg_{$post_id}_{$user_id}", __( '<strong>SEO:</strong> Your meta-description had more than 320 characters. It was shortened for you.', 'essential-seo' ), 0 );
+    }
 
-    // accept the input only after stripping out all html, extra white space etc!
-    $new_description_tmp = trim( $seo_meta_boxes_description );
-    $new_description_tmp = sanitize_text_field( $new_description_tmp );
-    // need to add slashes still before sending to the database
-    $new['description'] = addslashes( $new_description_tmp );
-
-    if ( $new && $new !== $old ) {
-
-        if ( strlen( $new['description'] ) > 320 ) {
-            // max of 320 chars
-            $new['description'] = substr( $new['description'], 0, 320 );
-            // save transient to db
-            set_transient( "seo_meta_box_error_msg_{$post_id}_{$user_id}", __( '<strong>SEO:</strong> Your meta-description had more than 320 characters. It was shortened for you.', 'essential-seo' ), 0 );
-        }
-
-        update_post_meta( $post_id, 'esseo_meta_boxes', $new );
-
-    } elseif ( '' === $new && $old ) {
-        delete_post_meta( $post_id, 'esseo_meta_boxes', $old );
+    // Store the description only; noindex is kept in its own _noindex meta key.
+    // ( update_post_meta() unslashes the value, so no addslashes() here. )
+    if ( '' !== $description ) {
+        update_post_meta( $post_id, 'esseo_meta_boxes', array( 'description' => $description ) );
+    } elseif ( $old ) {
+        delete_post_meta( $post_id, 'esseo_meta_boxes' );
     }
 
     // Save noindex separately to keep the _noindex meta key consistent across theme and plugin.
-    $noindex_value = isset( $_POST['esseo_meta_boxes']['noindex'] ) && '1' === $_POST['esseo_meta_boxes']['noindex'] ? '1' : '0';
+    $noindex_value = isset( $posted['noindex'] ) && '1' === $posted['noindex'] ? '1' : '0';
     update_post_meta( $post_id, '_noindex', $noindex_value );
 
 }

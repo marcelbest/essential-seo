@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Essential SEO 1.1.0\n"
-"POT-Creation-Date: 2026-05-11 00:00+0100\n"
-"PO-Revision-Date: 2026-05-11 00:00+0100\n"
+"Project-Id-Version: Essential SEO 1.2.1\n"
+"POT-Creation-Date: 2026-06-05 00:00+0100\n"
+"PO-Revision-Date: 2026-06-05 00:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -41,20 +41,6 @@ msgid ""
 "through each setting here. Once set, you can leave it as is and do the rest "
 "of the work on each post and page. They have now a custom fields to let you "
 "write a description for search engines."
-msgstr ""
-
-#: includes/functions.php
-msgid "Great"
-msgstr ""
-
-#: includes/functions.php
-msgid ""
-"You have Polylang installed. You can translate your default settings for all "
-"languages here"
-msgstr ""
-
-#: includes/functions.php
-msgid "Go to Polylang settings"
 msgstr ""
 
 #: includes/functions.php
@@ -103,15 +89,15 @@ msgstr ""
 msgid "Default & recommended: |"
 msgstr ""
 
-#: includes/functions.php includes/html_header.php
+#: includes/functions.php
 msgid "Default description"
 msgstr ""
 
 #: includes/functions.php
 msgid ""
-"Your default description of your website (from about 160 up to 320 chars). "
-"No HTML!<br>The description should correspont to your website's "
-"(text-)content."
+"Site-wide fallback description, used on any page that has neither its own "
+"meta description nor an excerpt. Recommended: 150–160 characters (max. 320). "
+"No HTML. It should describe your website's overall (text) content."
 msgstr ""
 
 #: includes/functions.php
@@ -134,34 +120,6 @@ msgid ""
 "Paste your complete tracking snippet here (GA4, GTM, etc.). The plugin "
 "automatically adds preconnect hints for known Google domains and a GTM "
 "noscript fallback in the footer."
-msgstr ""
-
-#: includes/functions.php
-msgid "Expecting a Numeric value! Please fix."
-msgstr ""
-
-#: includes/functions.php
-msgid "Expecting comma separated numeric values"
-msgstr ""
-
-#: includes/functions.php
-msgid "Expecting comma separated numeric values! Please fix."
-msgstr ""
-
-#: includes/functions.php
-msgid "Invalid email! Please re-enter!"
-msgstr ""
-
-#: includes/functions.php
-msgid "This setting field cannot be empty! Please enter a valid email address."
-msgstr ""
-
-#: includes/functions.php
-msgid "Please enter a valid email address."
-msgstr ""
-
-#: includes/html_header.php
-msgid "Default share image"
 msgstr ""
 
 #: includes/meta_boxes.php
@@ -189,9 +147,7 @@ msgid "Essential SEO"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"A simple SEO WordPress plugin, which provides just the essentials. It works "
-"well together with Polylang."
+msgid "A simple SEO WordPress plugin, which provides just the essentials."
 msgstr ""
 
 #. Author of the plugin/theme

@@ -27,6 +27,7 @@ function esseo_main_meta_tags() {
     $og_url           = '';
     $share_img_width  = 0;
     $share_img_height = 0;
+    $share_img_alt    = '';
 
     if ( is_single() || ( is_page() && ! is_front_page() ) ) {
 
@@ -53,6 +54,7 @@ function esseo_main_meta_tags() {
                 $share_img        = $og_image['url'];
                 $share_img_width  = $og_image['width'];
                 $share_img_height = $og_image['height'];
+                $share_img_alt    = $og_image['alt'];
             }
         }
 
@@ -107,6 +109,9 @@ function esseo_main_meta_tags() {
             if ( ! empty( $share_img_width ) ) {
                 ?><meta property="og:image:width" content="<?php echo (int) $share_img_width; ?>"><?php
                 ?><meta property="og:image:height" content="<?php echo (int) $share_img_height; ?>"><?php
+            }
+            if ( ! empty( $share_img_alt ) ) {
+                ?><meta property="og:image:alt" content="<?php echo esc_attr( $share_img_alt ); ?>"><?php
             }
         }
 

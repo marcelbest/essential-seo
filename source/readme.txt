@@ -43,6 +43,7 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 
 = Unreleased =
 
+* Added an og:image:alt tag, using the featured image's alt text from the media library
 * Updated the settings page screenshot to reflect the new OG image section
 
 = 1.3.0 =

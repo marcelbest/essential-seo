@@ -90,17 +90,20 @@ function esseo_delete_og_image( $post_id ) {
 }
 
 /**
- * Returns the OG image data for a post: URL plus width and height.
- * Generates the image on the fly if not yet cached.
+ * Returns the OG image data for a post: URL, width, height and alt text.
+ * Generates the image on the fly if not yet cached. The alt text is taken
+ * from the featured image's media-library alt attribute.
  *
  * @param int $post_id
- * @return array{url: string, width: int, height: int}|false False when no image is available.
+ * @return array{url: string, width: int, height: int, alt: string}|false False when no image is available.
  */
 function esseo_get_og_image( $post_id ) {
     $attachment_id = get_post_thumbnail_id( $post_id );
     if ( ! $attachment_id ) {
         return false;
     }
+
+    $alt = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
 
     $url = get_post_meta( $post_id, ESSEO_OG_META_KEY, true );
     if ( ! $url ) {
@@ -112,6 +115,7 @@ function esseo_get_og_image( $post_id ) {
             'url'    => $url,
             'width'  => ESSEO_OG_WIDTH,
             'height' => ESSEO_OG_HEIGHT,
+            'alt'    => $alt,
         );
     }
 
@@ -123,6 +127,7 @@ function esseo_get_og_image( $post_id ) {
             'url'    => $fallback[0],
             'width'  => (int) $fallback[1],
             'height' => (int) $fallback[2],
+            'alt'    => $alt,
         );
     }
 

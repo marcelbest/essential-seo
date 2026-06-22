@@ -47,12 +47,12 @@ function esseo_main_meta_tags() {
         $og_type  = '<meta property="og:type" content="article">';
         $og_url   = '<meta property="og:url" content="' . esc_url(get_permalink($post_id)) . '">';
 
-        if ( has_post_thumbnail($post_id) ) {
-            $thumbnail_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' );
-            if ( $thumbnail_img ) {
-                $share_img        = $thumbnail_img[0];
-                $share_img_width  = $thumbnail_img[1];
-                $share_img_height = $thumbnail_img[2];
+        if ( has_post_thumbnail( $post_id ) ) {
+            $og_image = esseo_get_og_image( $post_id );
+            if ( $og_image ) {
+                $share_img        = $og_image['url'];
+                $share_img_width  = $og_image['width'];
+                $share_img_height = $og_image['height'];
             }
         }
 

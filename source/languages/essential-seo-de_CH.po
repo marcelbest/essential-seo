@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Project-Id-Version: Essential SEO 1.2.2\n"
+"Project-Id-Version: Essential SEO 1.3.0\n"
 "POT-Creation-Date: 2026-06-05 00:00+0100\n"
 "PO-Revision-Date: 2026-06-05 00:00+0100\n"
 "Language-Team: \n"
@@ -185,3 +185,27 @@ msgstr "Marcel Best"
 #. Author URI of the plugin/theme
 msgid "https://marcelbest.com"
 msgstr "https://marcelbest.com"
+
+#: includes/functions.php
+msgid "OG Images"
+msgstr "OG-Bilder"
+
+#: includes/functions.php
+msgid "Generates a 1200×630 JPEG for every published post and page that has a featured image. Run this once after activating the feature, and again whenever you replace featured images in bulk."
+msgstr "Generiert ein 1200×630-JPEG für jeden veröffentlichten Beitrag und jede Seite mit Beitragsbild. Einmalig ausführen nach der Aktivierung – und erneut, wenn Beitragsbilder gesamthaft ersetzt wurden."
+
+#: includes/functions.php
+msgid "Regenerate OG images"
+msgstr "OG-Bilder neu generieren"
+
+#: includes/og-image.php
+#. translators: %d: number of generated images
+msgid "%d OG image generated."
+msgid_plural "%d OG images generated."
+msgstr[0] "%d OG-Bild generiert."
+msgstr[1] "%d OG-Bilder generiert."
+
+#: includes/og-image.php
+#. translators: %s: link to the Essential SEO settings page
+msgid "Essential SEO was updated – OG images for existing posts need to be regenerated once. <a href=\"%s\">Go to settings</a>"
+msgstr "Essential SEO wurde aktualisiert – OG-Bilder für bestehende Beiträge müssen einmalig neu generiert werden. <a href=\"%s\">Zu den Einstellungen</a>"

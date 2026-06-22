@@ -78,6 +78,11 @@ function esseo_install() {
         add_option( 'esseo_options', $default, '', true );
     }
 
+    // Mark current version so the OG regen notice is not shown on fresh installs.
+    if ( get_option( 'esseo_version' ) === false ) {
+        update_option( 'esseo_version', ESSEO_VERSION, false );
+    }
+
     // Saves the state of the plugin
     // @link https://codex.wordpress.org/Function_Reference/set_transient
     set_transient( 'essential-seo-activation', true, 0 );
@@ -280,7 +285,7 @@ function esseo_section_fn($desc) {
     // Array ( [id] => txt_section [title] => Text Form Fields [callback] => esseo_section_fn )
     switch ($desc['id']) {
         case 'og_section':
-            
+
             ?><p><?php
 
                 _e('The <a href="http://ogp.me/" target="_blank">Open Graph protocol</a> enables any web page to become a rich object in a social graph.', 'essential-seo');
@@ -338,6 +343,15 @@ function esseo_options_page_fields() {
         'desc'    => '',
         'type'    => 'checkbox',
         'std'     => 0, // 0 for off
+    );
+
+    $options[] = array(
+        'section' => 'og_section',
+        'id'      => ESSEO_SHORTNAME . '_og_regen',
+        'title'   => __( 'OG Images', 'essential-seo' ),
+        'desc'    => __( 'Generates a 1200×630 JPEG for every published post and page that has a featured image. Run this once after activating the feature, and again whenever you replace featured images in bulk.', 'essential-seo' ),
+        'type'    => 'og_regen_button',
+        'std'     => '',
     );
 
     // Header section
@@ -598,6 +612,17 @@ function esseo_form_field_fn( $args = array() ) {
         case 'checkbox':
             echo "<input class='checkbox$field_class' type='checkbox' id='$id' name='" . $esseo_option_name . "[$id]' value='1' " . checked( $options[$id], 1, false ) . '>';
             echo ( $desc != '' ) ? "<br><br><span class='description'>$desc</span>" : '';
+        break;
+
+        case 'og_regen_button':
+            if ( ! empty( $options[ ESSEO_SHORTNAME . '_checkbox_og' ] ) ) {
+                $regen_url = wp_nonce_url(
+                    add_query_arg( 'esseo_regenerate_og', '1', admin_url( 'options-general.php?page=essential-seo' ) ),
+                    'esseo_regenerate_og'
+                );
+                echo '<a href="' . esc_url( $regen_url ) . '" class="button button-secondary">' . esc_html__( 'Regenerate OG images', 'essential-seo' ) . '</a>';
+                echo ( $desc != '' ) ? '<p class="description">' . esc_html( $desc ) . '</p>' : '';
+            }
         break;
     }
 }

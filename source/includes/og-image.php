@@ -20,6 +20,10 @@ define( 'ESSEO_OG_WIDTH',    1200 );
 define( 'ESSEO_OG_HEIGHT',   630 );
 define( 'ESSEO_OG_QUALITY',  72 );
 
+// Version that introduced OG image generation. Fixed migration threshold for the
+// regen notice — do NOT bump this with the plugin version.
+define( 'ESSEO_OG_FEATURE_VERSION', '1.3.0' );
+
 /**
  * Returns path and URL of the esseo-og upload folder.
  *
@@ -217,7 +221,7 @@ add_action( 'plugins_loaded', 'esseo_check_og_version' );
 
 function esseo_check_og_version() {
     $stored = get_option( 'esseo_version', '0' );
-    if ( version_compare( $stored, '1.3.0', '<' ) ) {
+    if ( version_compare( $stored, ESSEO_OG_FEATURE_VERSION, '<' ) ) {
         update_option( 'esseo_og_regen_needed', '1', false );
         update_option( 'esseo_version', ESSEO_VERSION, false );
     }

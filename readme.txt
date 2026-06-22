@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 1.2.2
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,14 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 6. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png — The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
 
 == Changelog ==
+
+= 1.3.0 =
+
+* OG images are now generated automatically as 1200×630 JPEG — independent of the original upload format and WP media size settings
+* Generated images are stored in wp-content/uploads/esseo-og/ and never added to the media library
+* OG image is regenerated automatically when a post's featured image is changed or removed
+* Added "Regenerate OG images" button on the settings page to backfill existing posts
+* Plugin uninstall now removes all generated OG images and the esseo-og folder
 
 = 1.2.2 =
 

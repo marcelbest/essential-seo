@@ -33,13 +33,17 @@ For tracking, paste your complete GA4 or GTM snippet into the Scripts field — 
 Screenshots can be viewed on GitHub — copy the URL into your browser.
 
 1. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-1.png — The plugin is accessible under Settings → Essential SEO in the WordPress admin menu.
-2. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-2.png — The settings page lets you configure the title separator, default description, share image and tracking scripts.
+2. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-2.png — The settings page lets you configure the title separator, default description, share image and tracking scripts, and regenerate the auto-generated OG images.
 3. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-3.png — The SEO meta box can be enabled per editor via Preferences → Document settings → SEO.
 4. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-4.png — The SEO meta box on a page — enter a custom meta description or leave empty to fall back to the excerpt or site default.
 5. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-5.png — The SEO meta box works the same way on posts.
 6. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png — The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
 
 == Changelog ==
+
+= Unreleased =
+
+* Updated the settings page screenshot to reflect the new OG image section
 
 = 1.3.0 =
 

@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,7 +41,7 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 
 == Changelog ==
 
-= Unreleased =
+= 1.3.1 =
 
 * Added an og:image:alt tag, using the featured image's alt text from the media library
 * Added a plugin icon, shown on the plugins and updates screens

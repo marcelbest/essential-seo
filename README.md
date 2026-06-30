@@ -39,7 +39,7 @@ source/
 │   ├── banner-772x250.png
 │   ├── banner-1544x500.png
 │   ├── banner-1544x500.psd
-│   └── screenshot-*.png
+│   └── screenshot-*.png   # must match the current UI — re-shoot in the same release as any UI change
 ├── css/
 │   └── style.scss
 ├── js/
@@ -55,11 +55,12 @@ source/
 ### Releases
 
 1. Make your changes in `source/`
-2. Bump the version in `source/essential-seo.php` and `source/readme.txt`
-3. Build with CodeKit
-4. Double-click `create-release-zip.command` to generate the ZIP
-5. Push commits to GitHub
-6. On GitHub: Releases → Draft a new release → set tag to `v1.x.x` → upload the ZIP as asset
+2. **If the settings UI or any documented screen changed**, re-shoot the affected `source/assets/screenshot-*.png` and update their captions in `source/readme.txt`. Screenshots ship in the same release as the change they document — never as a separate commit afterwards, or the released tag won't match its own UI.
+3. Bump the version in `source/essential-seo.php` and `source/readme.txt`
+4. Build with CodeKit
+5. Double-click `create-release-zip.command` to generate the ZIP
+6. Push commits to GitHub
+7. On GitHub: Releases → Draft a new release → set tag to `v1.x.x` → upload the ZIP as asset
 
 The plugin update checker picks up the new tag automatically and notifies WordPress sites with the plugin installed.
 

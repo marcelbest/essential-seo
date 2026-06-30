@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
 Tested up to: 7.0
-Stable tag: 1.3.1
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,12 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 6. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png — The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
 
 == Changelog ==
+
+= 1.4.0 =
+
+* Added an "Exclude editors from tracking" option — when enabled, the tracking snippet (and GTM noscript fallback) is no longer output for logged-in users who can edit posts (administrators, editors, authors, contributors), keeping your own visits out of analytics without configuring filters in GA4
+* Added German translations (de_DE, de_CH) for the new option
+* Fixed an undefined-array-key warning that could appear for newly added checkbox settings on existing installs
 
 = 1.3.1 =
 

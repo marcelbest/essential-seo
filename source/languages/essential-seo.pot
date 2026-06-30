@@ -122,6 +122,18 @@ msgid ""
 "noscript fallback in the footer."
 msgstr ""
 
+#: includes/functions.php
+msgid "Exclude editors from tracking"
+msgstr ""
+
+#: includes/functions.php
+msgid ""
+"When enabled, the tracking snippet (and GTM noscript fallback) is not output "
+"for logged-in users who can edit posts — administrators, editors, authors "
+"and contributors. Keeps your own visits out of your analytics without "
+"configuring filters in GA4."
+msgstr ""
+
 #: includes/meta_boxes.php
 msgid "Do not index this post/page (noindex)"
 msgstr ""

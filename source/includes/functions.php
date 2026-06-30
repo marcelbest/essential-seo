@@ -72,6 +72,7 @@ function esseo_install() {
             ESSEO_SHORTNAME . '_default_description' => '',
             ESSEO_SHORTNAME . '_share_img'           => '',
             ESSEO_SHORTNAME . '_header_scripts'      => '',
+            ESSEO_SHORTNAME . '_exclude_logged_in'   => '0',
         ];
 
         // Creates the option and auto-loads it on every request.
@@ -398,7 +399,16 @@ function esseo_options_page_fields() {
         'std'         => '',
         'field_class' => 'scripts',
     );
-     
+
+    $options[] = array(
+        'section' => 'scripts_section',
+        'id'      => ESSEO_SHORTNAME . '_exclude_logged_in',
+        'title'   => __( 'Exclude editors from tracking', 'essential-seo' ),
+        'desc'    => __( 'When enabled, the tracking snippet (and GTM noscript fallback) is not output for logged-in users who can edit posts — administrators, editors, authors and contributors. Keeps your own visits out of your analytics without configuring filters in GA4.', 'essential-seo' ),
+        'type'    => 'checkbox',
+        'std'     => 0, // 0 for off
+    );
+
     return $options;
 }
 
@@ -610,7 +620,11 @@ function esseo_form_field_fn( $args = array() ) {
         break;
 
         case 'checkbox':
-            echo "<input class='checkbox$field_class' type='checkbox' id='$id' name='" . $esseo_option_name . "[$id]' value='1' " . checked( $options[$id], 1, false ) . '>';
+            // Existing installs may lack a newly added checkbox key (the std
+            // default is intentionally not applied to checkboxes above), so
+            // fall back to $std to avoid an undefined-array-key warning.
+            $checkbox_value = isset( $options[$id] ) ? $options[$id] : $std;
+            echo "<input class='checkbox$field_class' type='checkbox' id='$id' name='" . $esseo_option_name . "[$id]' value='1' " . checked( $checkbox_value, 1, false ) . '>';
             echo ( $desc != '' ) ? "<br><br><span class='description'>$desc</span>" : '';
         break;
 

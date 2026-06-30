@@ -206,7 +206,26 @@ function esseo_document_title_separator($sep) {
  */
 add_action('wp_head', 'esseo_add_header_scripts', 5);
 
+/**
+ * Whether the tracking snippet should be suppressed for the current request.
+ *
+ * Returns true when the "exclude editors from tracking" option is enabled and
+ * the current user can edit posts (administrators, editors, authors,
+ * contributors). Lets site staff keep their own visits out of analytics
+ * without configuring filters in GA4.
+ */
+function esseo_suppress_tracking() {
+
+    $options = get_option('esseo_options');
+    $exclude = isset($options['esseo_exclude_logged_in']) ? $options['esseo_exclude_logged_in'] : 0;
+
+    return ( $exclude && current_user_can('edit_posts') );
+
+}
+
 function esseo_add_header_scripts() {
+
+    if ( esseo_suppress_tracking() ) return;
 
     $options = get_option('esseo_options');
     $scripts = isset($options['esseo_header_scripts']) ? trim($options['esseo_header_scripts']) : '';
@@ -237,6 +256,8 @@ function esseo_add_header_scripts() {
 add_action('wp_footer', 'esseo_add_gtm_noscript');
 
 function esseo_add_gtm_noscript() {
+
+    if ( esseo_suppress_tracking() ) return;
 
     $options = get_option('esseo_options');
     $scripts = isset($options['esseo_header_scripts']) ? $options['esseo_header_scripts'] : '';

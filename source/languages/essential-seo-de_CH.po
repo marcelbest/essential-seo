@@ -146,6 +146,23 @@ msgstr ""
 "Plugin ergänzt automatisch Preconnect-Hinweise für bekannte Google-Domains "
 "und einen GTM-Noscript-Fallback im Footer."
 
+#: includes/functions.php
+msgid "Exclude editors from tracking"
+msgstr "Redaktion vom Tracking ausschliessen"
+
+#: includes/functions.php
+msgid ""
+"When enabled, the tracking snippet (and GTM noscript fallback) is not output "
+"for logged-in users who can edit posts — administrators, editors, authors "
+"and contributors. Keeps your own visits out of your analytics without "
+"configuring filters in GA4."
+msgstr ""
+"Wenn aktiviert, wird das Tracking-Snippet (und der GTM-Noscript-Fallback) "
+"nicht für angemeldete Benutzer ausgegeben, die Beiträge bearbeiten können — "
+"Administratoren, Redakteure, Autoren und Mitarbeiter. So schliesst du deine "
+"eigenen Besuche aus der Statistik aus, ohne Filter in GA4 einrichten zu "
+"müssen."
+
 #: includes/meta_boxes.php
 msgid "Do not index this post/page (noindex)"
 msgstr "Diesen Beitrag/diese Seite nicht indexieren (noindex)"

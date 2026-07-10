@@ -3,7 +3,9 @@
 Plugin Name: Essential SEO
 Plugin URI: https://github.com/marcelbest/essential-seo
 Description: A simple SEO WordPress plugin, which provides just the essentials.
-Version: 1.4.0
+Version: 1.4.1
+Requires at least: 6.0
+Requires PHP: 8.2
 Author: Marcel Best
 Author URI: https://marcelbest.com
 License: GPLv2 or later
@@ -19,7 +21,7 @@ defined( 'ABSPATH' ) || die( 'No direct script access allowed!' );
  * Define Constant(s)
  */
 
-define( 'ESSEO_VERSION', '1.4.0' );
+define( 'ESSEO_VERSION', '1.4.1' );
 define( 'ESSEO_PLUGIN', __FILE__ );
 define( 'ESSEO_PLUGIN_BASENAME', plugin_basename( ESSEO_PLUGIN ) );
 define( 'ESSEO_PLUGIN_NAME', trim( dirname( ESSEO_PLUGIN_BASENAME ), '/' ) );

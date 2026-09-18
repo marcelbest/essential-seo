@@ -3,7 +3,7 @@ Contributors: Marcel Best
 Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
-Tested up to: 7.0.4
+Tested up to: 7.1.1
 Requires PHP: 8.2
 Stable tag: 1.4.3
 License: GPLv2 or later

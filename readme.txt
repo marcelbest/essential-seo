@@ -3,9 +3,9 @@ Contributors: Marcel Best
 Donate link: https://www.paypal.me/marcelbest79
 Tags: seo
 Requires at least: 6.0
-Tested up to: 7.0.4
+Tested up to: 7.1.1
 Requires PHP: 8.2
-Stable tag: 1.4.3
+Stable tag: 1.4.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,11 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 6. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png — The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
 
 == Changelog ==
+
+= 1.4.4 =
+
+* Tested against WordPress 7.1.1 — no code changes were needed, the compatibility header now names the exact release the plugin was verified on
+* Updated the GitHub README — the requirements now state PHP 8.2, as enforced since 1.4.1, and the release steps and file structure match the current setup
 
 = 1.4.3 =
 

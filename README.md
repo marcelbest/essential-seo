@@ -14,7 +14,7 @@ A simple SEO WordPress plugin that provides just the essentials.
 ## Requirements
 
 - WordPress 6.0 or higher
-- PHP 7.4 or higher
+- PHP 8.2 or higher
 
 ## Installation
 
@@ -39,6 +39,10 @@ source/
 │   ├── banner-772x250.png
 │   ├── banner-1544x500.png
 │   ├── banner-1544x500.psd
+│   ├── icon-128x128.png
+│   ├── icon-128x128.psd
+│   ├── icon-256x256.png
+│   ├── icon-256x256.psd
 │   └── screenshot-*.png   # must match the current UI — re-shoot in the same release as any UI change
 ├── css/
 │   └── style.scss
@@ -48,6 +52,7 @@ source/
 │   ├── functions.php
 │   ├── html_header.php
 │   ├── meta_boxes.php
+│   ├── og-image.php
 │   └── plugin-update-checker/
 └── languages/
 ```

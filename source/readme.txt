@@ -5,7 +5,7 @@ Tags: seo
 Requires at least: 6.0
 Tested up to: 7.1.2
 Requires PHP: 8.2
-Stable tag: 1.4.5
+Stable tag: 1.4.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,11 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 6. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png — The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
 
 == Changelog ==
+
+= 1.4.6 =
+
+* Fixed OG images that were smaller than 1200×630 — featured images with a different aspect ratio were scaled to fit instead of cropped, so the generated file did not match the og:image:width and og:image:height tags; they are now cropped to exactly 1200×630
+* Existing OG images are not regenerated automatically — use the "Regenerate OG images" button on the settings page once after updating
 
 = 1.4.5 =
 

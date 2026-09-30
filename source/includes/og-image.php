@@ -55,7 +55,7 @@ function esseo_generate_og_image( $post_id, $attachment_id ) {
         return false;
     }
 
-    $resized = $editor->resize( ESSEO_OG_WIDTH, ESSEO_OG_HEIGHT, false );
+    $resized = $editor->resize( ESSEO_OG_WIDTH, ESSEO_OG_HEIGHT, true );
     if ( is_wp_error( $resized ) ) {
         return false;
     }

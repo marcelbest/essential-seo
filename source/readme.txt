@@ -5,7 +5,7 @@ Tags: seo
 Requires at least: 6.0
 Tested up to: 7.1.3
 Requires PHP: 8.2
-Stable tag: 1.4.7
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,11 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 6. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png — The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
 
 == Changelog ==
+
+= 1.5.0 =
+
+* Added "Settings" and "Donate" links to the plugin's row on the Plugins screen — the settings page is now one click away, and the donate link opens PayPal in a new tab
+* German translations now follow the WordPress convention for formal and informal address — de_DE and de_CH use the formal "Sie", while the new de_DE_informal and de_CH_informal translations keep the informal "du"
 
 = 1.4.7 =
 

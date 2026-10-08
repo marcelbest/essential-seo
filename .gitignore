@@ -23,6 +23,9 @@ create-release-zip.command
 releases/
 *.zip
 
+# Ignore local helper scripts (local only)
+compile-translations.command
+
 # Ignore environment and secret files
 .env
 config.json

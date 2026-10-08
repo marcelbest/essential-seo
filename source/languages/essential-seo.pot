@@ -32,6 +32,14 @@ msgid "To the settings page"
 msgstr ""
 
 #: includes/functions.php
+msgid "Settings"
+msgstr ""
+
+#: includes/functions.php
+msgid "Donate"
+msgstr ""
+
+#: includes/functions.php
 msgid "Essential SEO Settings Page"
 msgstr ""
 

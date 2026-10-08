@@ -143,6 +143,23 @@ function esseo_add_admin_menu() {
 }
 
 /**
+ * Add settings and donate links to the plugin list
+ */
+
+add_filter( 'plugin_action_links_' . ESSEO_PLUGIN_BASENAME, 'esseo_plugin_action_links' );
+
+function esseo_plugin_action_links( $links ) {
+
+    $esseo_links = array(
+        '<a href="' . esc_url( admin_url( 'options-general.php?page=' . ESSEO_PLUGIN_NAME ) ) . '">' . esc_html__( 'Settings', 'essential-seo' ) . '</a>',
+        '<a href="https://www.paypal.me/marcelbest79" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">' . esc_html__( 'Donate', 'essential-seo' ) . '</a>',
+    );
+
+    return array_merge( $esseo_links, $links );
+
+}
+
+/**
  * Specify Hooks/Filters
  */
 

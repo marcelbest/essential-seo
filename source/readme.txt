@@ -5,7 +5,7 @@ Tags: seo
 Requires at least: 6.0
 Tested up to: 7.1.4
 Requires PHP: 8.2
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,18 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 6. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png — The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
 
 == Changelog ==
+
+= 1.5.2 =
+
+* Fixed og:url on archive pages — category, tag, author, date and search pages pointed to the homepage, they now point to the page itself, including paged pages such as /page/2/
+* Fixed og:title on archive pages — the blog page, author, date and search archives showed the category of the first post in the loop, they now use the document title (archive name, page number and site name)
+* Added a version parameter to the generated OG image URL — after replacing a featured image, platforms that cache share images by URL pick up the new image
+* Fixed repeated OG image generation — a failed generation is now remembered, so the image editor no longer runs again on every page view; a new featured image or "Regenerate OG images" retries
+* Changed the noindex output to the core wp_robots filter — the separate robots meta tag is gone, noindex is merged into the robots tag WordPress already outputs
+* Rewrote the admin script without jQuery — the character counter and the error highlighting work as before
+* Changed the settings page heading to h1 and escaped the og:locale output
+* Tested against WordPress 7.1.4 — the compatibility header now names the exact release the plugin was verified on
+* Added a local development helper to .gitignore — no effect on the plugin
 
 = 1.5.1 =
 

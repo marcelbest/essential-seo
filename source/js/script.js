@@ -1,39 +1,39 @@
-/* global jQuery */
-
-jQuery(function() {
+document.addEventListener('DOMContentLoaded', function() {
 
     // Highlight fields with validation errors
-    var error_msg = jQuery(".esseo-message p.setting-error-message");
+    document.querySelectorAll(".esseo-message p.setting-error-message").forEach(function(error_msg) {
 
-    if (error_msg.length !== 0) {
+        var error_setting = error_msg.getAttribute('data-title');
 
-        jQuery(".esseo-message").each(function() {
-
-            var error_setting = jQuery(this).find("p.setting-error-message").attr('data-title');
-
-            jQuery("label[for='" + error_setting + "']").addClass('error');
-            jQuery("input[id='" + error_setting + "']").addClass('esseo-field-error');
-
+        document.querySelectorAll("label[for='" + error_setting + "']").forEach(function(label) {
+            label.classList.add('error');
         });
 
-    }
+        document.querySelectorAll("input[id='" + error_setting + "']").forEach(function(input) {
+            input.classList.add('esseo-field-error');
+        });
+
+    });
 
     // Live character counter for the SEO meta description (works in the block editor)
-    jQuery(".esseo-meta-description").each(function() {
+    document.querySelectorAll(".esseo-meta-description").forEach(function(ta) {
 
-        var ta  = jQuery(this);
-        var max = parseInt(ta.attr("maxlength"), 10) || 320;
-        var out = ta.nextAll(".esseo-charcount").first();
+        var max = parseInt(ta.getAttribute("maxlength"), 10) || 320;
+        var out = ta.nextElementSibling;
 
-        if (out.length === 0) {
+        while (out && !out.classList.contains("esseo-charcount")) {
+            out = out.nextElementSibling;
+        }
+
+        if (!out) {
             return;
         }
 
         var render = function() {
-            out.text(ta.val().length + " / " + max);
+            out.textContent = ta.value.length + " / " + max;
         };
 
-        ta.on("input", render);
+        ta.addEventListener("input", render);
         render();
 
     });

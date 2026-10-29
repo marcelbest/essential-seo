@@ -250,7 +250,7 @@ function esseo_settings_page_fn() {
     $settings_output = esseo_get_settings();
 
     ?><div class="wrap"><?php
-        ?><h2><?php echo $settings_output['esseo_page_title']; ?></h2><?php
+        ?><h1><?php echo esc_html( $settings_output['esseo_page_title'] ); ?></h1><?php
 
         ?><p><?php
 
@@ -773,7 +773,7 @@ function esseo_options_page_style( $hook ) {
 
     // https://codex.wordpress.org/Function_Reference/plugin_dir_url
     wp_enqueue_style( 'esseo-style', plugin_dir_url( ESSEO_PLUGIN ) . 'css/style.css', array(), ESSEO_VERSION );
-    wp_enqueue_script( 'esseo-script', plugin_dir_url( ESSEO_PLUGIN ) . 'js/script.js', array( 'jquery' ), ESSEO_VERSION, true );
+    wp_enqueue_script( 'esseo-script', plugin_dir_url( ESSEO_PLUGIN ) . 'js/script.js', array(), ESSEO_VERSION, true );
 }
 
 // Editor assets — only the script is needed (for the meta description character counter).
@@ -787,5 +787,5 @@ function esseo_editor_assets( $hook ) {
         return;
     }
 
-    wp_enqueue_script( 'esseo-script', plugin_dir_url( ESSEO_PLUGIN ) . 'js/script.js', array( 'jquery' ), ESSEO_VERSION, true );
+    wp_enqueue_script( 'esseo-script', plugin_dir_url( ESSEO_PLUGIN ) . 'js/script.js', array(), ESSEO_VERSION, true );
 }

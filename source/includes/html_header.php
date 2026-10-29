@@ -61,7 +61,6 @@ function esseo_main_meta_tags() {
     } else {
 
         $description = $default_description;
-        $og_title    = '<meta property="og:title" content="' . $default_title . '">';
 
         if ( is_category() || is_tag() || is_tax() ) {
             $term_description = term_description();
@@ -70,18 +69,18 @@ function esseo_main_meta_tags() {
             }
         }
 
-        $categories = get_the_category();
-        if ( ! empty( $categories ) && ! is_front_page() ) {
-            $og_title = '<meta property="og:title" content="' . esc_attr($categories[0]->name) . ' ' . $default_title_separator . ' ' . $default_title . '">';
-        }
-
-        $tag = single_tag_title('', false);
-        if ( ! empty( $tag ) ) {
-            $og_title = '<meta property="og:title" content="' . esc_attr($tag) . ' ' . $default_title_separator . ' ' . $default_title . '">';
+        if ( is_front_page() && ! is_paged() ) {
+            $og_title = '<meta property="og:title" content="' . $default_title . '">';
+            $og_url   = '<meta property="og:url" content="' . esc_url(home_url('/')) . '">';
+        } else {
+            // Paged front page, archives, blog page, search and 404: the document
+            // title already combines the archive name, page number and site name.
+            global $wp;
+            $og_title = '<meta property="og:title" content="' . esc_attr(wp_get_document_title()) . '">';
+            $og_url   = '<meta property="og:url" content="' . esc_url(home_url(user_trailingslashit($wp->request))) . '">';
         }
 
         $og_type = '<meta property="og:type" content="website">';
-        $og_url  = '<meta property="og:url" content="' . esc_url(home_url()) . '">';
 
     }
 
@@ -97,7 +96,7 @@ function esseo_main_meta_tags() {
         echo $og_type;
         echo $og_url;
 
-        ?><meta property="og:locale" content="<?php echo get_locale(); ?>"><?php
+        ?><meta property="og:locale" content="<?php echo esc_attr( get_locale() ); ?>"><?php
         ?><meta property="og:site_name" content="<?php echo $default_title; ?>"><?php
 
         if ( ! empty( $description ) ) {
@@ -143,14 +142,21 @@ function esseo_opengraph_doctype($output) {
 
 
 /**
- * Output <meta name="robots" content="noindex"> for posts and pages with noindex set.
+ * Add noindex to the core robots meta tag for posts and pages with noindex set.
+ *
+ * @link https://developer.wordpress.org/reference/hooks/wp_robots/
  */
-add_action( 'wp_head', 'esseo_noindex_meta_tag', 1 );
+add_filter( 'wp_robots', 'esseo_noindex_robots' );
 
-function esseo_noindex_meta_tag() {
-    if ( is_singular() && '1' === get_post_meta( get_the_ID(), '_noindex', true ) ) {
-        echo '<meta name="robots" content="noindex, follow">' . "\n";
+function esseo_noindex_robots( $robots ) {
+    if ( is_singular() && '1' === get_post_meta( get_queried_object_id(), '_noindex', true ) ) {
+        $robots['noindex'] = true;
+        // Keep links followed, unless core already set nofollow (site not public).
+        if ( empty( $robots['nofollow'] ) ) {
+            $robots['follow'] = true;
+        }
     }
+    return $robots;
 }
 
 /**

@@ -37,14 +37,39 @@ function esseo_og_upload_dir() {
     );
 }
 
+// Post meta value that marks a failed generation, so the image editor does not
+// run again on every front-end request. Cleared by the next successful run.
+define( 'ESSEO_OG_FAILED', 'failed' );
+
 /**
  * Generates the OG JPEG for a post and saves its URL as post meta.
+ *
+ * On failure the meta is set to ESSEO_OG_FAILED; a new featured image or the
+ * "Regenerate OG images" button retries.
  *
  * @param int $post_id
  * @param int $attachment_id
  * @return string|false URL on success, false on failure.
  */
 function esseo_generate_og_image( $post_id, $attachment_id ) {
+    $url = esseo_render_og_image( $post_id, $attachment_id );
+
+    update_post_meta( $post_id, ESSEO_OG_META_KEY, $url ? $url : ESSEO_OG_FAILED );
+
+    return $url;
+}
+
+/**
+ * Writes the OG JPEG for a post to the esseo-og folder.
+ *
+ * The URL carries the generation time as version, so platforms that cache
+ * share images by URL pick up a replaced featured image.
+ *
+ * @param int $post_id
+ * @param int $attachment_id
+ * @return string|false URL on success, false on failure.
+ */
+function esseo_render_og_image( $post_id, $attachment_id ) {
     $source = get_attached_file( $attachment_id );
     if ( ! $source || ! file_exists( $source ) ) {
         return false;
@@ -71,10 +96,7 @@ function esseo_generate_og_image( $post_id, $attachment_id ) {
         return false;
     }
 
-    $url = $og['url'] . '/' . (int) $post_id . '-og.jpg';
-    update_post_meta( $post_id, ESSEO_OG_META_KEY, $url );
-
-    return $url;
+    return $og['url'] . '/' . (int) $post_id . '-og.jpg?v=' . time();
 }
 
 /**
@@ -114,7 +136,7 @@ function esseo_get_og_image( $post_id ) {
         $url = esseo_generate_og_image( $post_id, (int) $attachment_id );
     }
 
-    if ( $url ) {
+    if ( $url && ESSEO_OG_FAILED !== $url ) {
         return array(
             'url'    => $url,
             'width'  => ESSEO_OG_WIDTH,

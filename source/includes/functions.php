@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || die( 'No direct script access allowed!' );
 
 require_once 'plugin-update-checker/plugin-update-checker.php';
 
-$esseo_UpdateChecker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+$esseo_UpdateChecker = YahnisElsts\PluginUpdateChecker\v6\PucFactory::buildUpdateChecker(
     'https://github.com/marcelbest/essential-seo/',
     ESSEO_PLUGIN,
     ESSEO_PLUGIN_NAME

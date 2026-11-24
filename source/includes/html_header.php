@@ -96,7 +96,13 @@ function esseo_main_meta_tags() {
         echo $og_type;
         echo $og_url;
 
-        ?><meta property="og:locale" content="<?php echo esc_attr( get_locale() ); ?>"><?php
+        // Open Graph expects language_TERRITORY, so drop variants like _informal or _formal
+        $og_locale = get_locale();
+        if ( preg_match( '/^[a-z]{2,3}_[A-Z]{2}/', $og_locale, $locale_match ) ) {
+            $og_locale = $locale_match[0];
+        }
+
+        ?><meta property="og:locale" content="<?php echo esc_attr( $og_locale ); ?>"><?php
         ?><meta property="og:site_name" content="<?php echo $default_title; ?>"><?php
 
         if ( ! empty( $description ) ) {

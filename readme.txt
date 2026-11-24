@@ -5,7 +5,7 @@ Tags: seo
 Requires at least: 6.0
 Tested up to: 7.1.4
 Requires PHP: 8.2
-Stable tag: 1.5.2
+Stable tag: 1.5.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,11 @@ Screenshots can be viewed on GitHub — copy the URL into your browser.
 6. https://raw.githubusercontent.com/marcelbest/essential-seo/main/source/assets/screenshot-6.png — The plugin outputs clean meta tags in the HTML head — description, Open Graph tags and more.
 
 == Changelog ==
+
+= 1.5.3 =
+
+* Fixed og:locale on sites with a locale variant — WordPress locales such as de_CH_informal or de_DE_formal are now shortened to the Open Graph format language_TERRITORY (de_CH, de_DE)
+* Updated the bundled plugin-update-checker library to v6.0 — the update checker now uses the v6 namespace
 
 = 1.5.2 =
 
